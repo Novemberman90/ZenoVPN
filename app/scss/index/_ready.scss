@@ -12,17 +12,39 @@
       background-position: 0 bottom;
       background-size: contain;
       background-repeat: no-repeat;
-      background-image: url('../images/readyGradient.webp');
       width: 100%;
       inset: 0;
       z-index: -1;
+
+    /* WebP 1x — ОСНОВНОЕ */
+      background-image: url('../images/ready/ready-gradient.webp');
+    
+      /* WebP 2x */
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url('../images/ready/ready-gradient-x2.webp');
+      }
+    
+      /* PNG fallback, если WebP не поддерживается */
+      @supports not (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+        background-image: url('../images/ready/ready-gradient.png');
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url('../images/ready/ready-gradient-x2.png');
+        }
+      }
     }
+  }
+  &__img-box {
+    margin-top: auto;
   }
   &__img {
     max-width: 529px;
     width: 100%;
-    object-fit: cover;
-    height: 100%;
+    height: auto;
     position: relative;
   }
 
@@ -139,8 +161,27 @@
       &::before {
         background-size: contain;
         left: auto;
-        background-image: url('../images/readyGradientMob.webp');
         width: 100%;
+      /* WebP 1x — ОСНОВНОЕ */
+        background-image: url('../images/ready/ready-gradient-mob.webp');
+      
+        /* WebP 2x */
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url('../images/ready/ready-gradient-mob-x2.webp');
+        }
+      
+        /* PNG fallback, если WebP не поддерживается */
+        @supports not (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+          background-image: url('../images/ready/ready-gradient-mob.png');
+      
+          @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+            background-image: url('../images/ready/ready-gradient-mob-x2.png');
+          }
+        }
       }
     }
     &__title {
@@ -148,6 +189,7 @@
     }
     &__img-box {
       position: static;
+      margin-top: 0;
     }
     &__content {
       padding: 0;

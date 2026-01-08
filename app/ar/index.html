@@ -18,8 +18,22 @@
       <div class="container">
         <div class="ready__inner">
           <div class="ready__img-box">
-            <img class="ready__img" src="../images/astronautReady.webp" srcset="../images/astronautReady@x2.png 2x"
-              width="529" height="564" alt="هل أنت مستعد للتفكير بحرية؟" />
+            <picture>
+              <!-- WebP -->
+              <source type="image/webp" srcset="
+                ../images/ready/astronaut-ready.webp 1x,
+                ../images/ready/astronaut-ready-x2.webp 2x" />
+            
+              <!-- PNG -->
+              <source type="image/png" srcset="
+                ../images/ready/astronaut-ready.png 1x,
+                ../images/ready/astronaut-ready-x2.png 2x" />
+            
+              <!-- Fallback img -->
+              <img class="ready__img" src="../images/ready/astronaut-ready.png" width="529" height="564"
+                alt="هل أنت مستعد للتفكير بحرية؟" loading="lazy" />
+            </picture>
+
           </div>
           <div class="ready__content">
             <h2 class="title ready__title">
@@ -27,9 +41,22 @@
             </h2>
             <div class="ready__info">
               <div class="ready__item ready__item--support">
-                <img class="ready__icon" src="../images/earphones.webp" srcset="../images/earphones@x2.png 2x"
-                  width="64" height="64" alt="ZenoVPN دعم العملاء على مدار الساعة طوال أيام الأسبوع
+                <picture>
+                  <!-- WebP -->
+                  <source type="image/webp" srcset="
+                    ../images/ready/earphones.webp 1x,
+                    ../images/ready/earphones-x2.webp 2x" />
+                
+                  <!-- PNG -->
+                  <source type="image/png" srcset="
+                      ../images/ready/earphones.png 1x,
+                      ../images/ready/earphones-x2.png 2x" />
+                
+                  <!-- Fallback img -->
+                  <img class="ready__icon" src="../images/ready/earphones.png" width="64" height="64"
+                    alt="دعم العملاء على مدار الساعة طوال أيام الأسبوع
 عبر Telegram" loading="lazy" />
+                </picture>
                 <div class="ready__item-descr">
                   دعم العملاء على مدار
                   <span class="ready__item-accent">
@@ -40,8 +67,21 @@
               </div>
 
               <div class="ready__item ready__item--guarantee">
-                <img class="ready__icon" src="../images/guarantee.webp" srcset="../images/guarantee@x2.png 2x"
-                  width="64" height="64" alt="ZenoVPN 30-day money-back guarantee" loading="lazy" />
+                <picture>
+                  <!-- WebP -->
+                  <source type="image/webp" srcset="
+                    ../images/ready/guarantee.webp 1x,
+                    ../images/ready/guarantee-x2.webp 2x" />
+                
+                  <!-- PNG -->
+                  <source type="image/png" srcset="
+                      ../images/ready/guarantee.png 1x,
+                      ../images/ready/guarantee-x2.png 2x" />
+                
+                  <!-- img -->
+                  <img class="ready__icon" src="../images/ready/guarantee.png" width="64" height="64"
+                    alt="ضمان استرداد الأموال لمدة 30 يومًا" loading="lazy" />
+                </picture>
                 <div class="ready__item-descr">
                   ضمان استرداد
                   <span class="ready__item-accent">الأموال لمدة 30</span>
