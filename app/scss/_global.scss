@@ -86,7 +86,6 @@ body {
     -webkit-backdrop-filter: blur(16px);
     z-index: 2;
     transition: box-shadow 0.3s, inset 0.3s;
-    padding: 10px 12px 10px 10px; 
 
     &::after {
         content: "";
@@ -101,5 +100,23 @@ body {
             linear-gradient(#fff, #fff);
         -webkit-mask-composite: xor;
         mask-composite: exclude;
+    }
+}
+
+.logo {
+    outline-offset: 10px;
+    border-radius: 3px;
+    transition: transform 0.3s, outline 0.3s;
+
+    &:hover {
+        transform: scale(1.10);
+    }
+
+    &:focus {
+        outline: 1px solid $accent;
+    }
+
+    &:active {
+        transform: scale(0.98);
     }
 }

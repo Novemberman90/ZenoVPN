@@ -1,59 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Fast & Secure ZenoVPN for Online Privacy
-    </title>
-
-    <!-- SEO -->
-    <meta name="description" content="ZenoVPN provides fast, secure, and private internet access. Protect your data, bypass restrictions, and enjoy true online freedom worldwide.">
-    <link rel="canonical" href="https://zenovpn.com/">
-
-    <!-- cryptomus -->
-    <meta name="cryptomus" content="8e67b6b7">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Fast & Secure ZenoVPN for Online Privacy">
-    <meta property="og:description" content="ZenoVPN provides fast, secure, and private internet access. Protect your data, bypass restrictions, and enjoy true online freedom worldwide.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://zenovpn.com/">
-    <meta property="og:site_name" content="ZenoVPN">
-    <meta property="og:image" content="https://zenovpn.com/images/preview.jpg">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Fast & Secure Online Privacy with ZenoVPN">
-    <meta name="twitter:description" content="Protect your privacy, browse securely, and access global content with ZenoVPN. High speed, strong encryption, and no limits.">
-    <meta name="twitter:image" content="https://zenovpn.com/images/preview.jpg">
-
-    <!-- Language -->
-    <link rel="alternate" hreflang="en" href="https://zenovpn.com/">
-    <link rel="alternate" hreflang="ru" href="https://zenovpn.com/ru/">
-    <link rel="alternate" hreflang="ar" href="https://zenovpn.com/ar/">
-    <link rel="alternate" hreflang="x-default" href="https://zenovpn.com/">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
-        rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="./css/style.min.css">
-</head>
-
-<body>
-    <header class="header">
+<header class="header">
     <div class="container">
         <nav class="menu">
             <div class="header__inner">
                 <a class="logo" href="#">
-                    <img src="./images/logo.svg" alt="ZenoVPN Logo" width="153" height="46">
+                    <img src="./images/logo.svg" alt="@@altLogo" width="153" height="46">
                 </a>
                 <ul class="menu__list">
                     <li class="menu__item">
@@ -111,21 +61,12 @@
                         </li>
                     </ul>
                 </div>
-                <a class="cta" href="https://t.me/ZenoVPNBot" target="_blank">
-    <span class="cta__text">
-        Open VPN
-    </span>
-    <span class="cta__icon">
-        <svg width="21" height="18">
-            <use href="../../images/sprite.svg#telegram"></use>
-        </svg>
-    </span>
-</a>
+                @@include('./cta.html', {
+                "ctaLink": "https://t.me/ZenoVPNBot",
+                "ctaText": "Open VPN",
+                "ctaIcon": "telegram"
+                })
             </div>
         </nav>
     </div>
 </header>
-    <script src="js/main.min.js"></script>
-</body>
-
-</html>

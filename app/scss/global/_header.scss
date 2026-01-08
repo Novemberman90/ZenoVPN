@@ -1,0 +1,113 @@
+.header {
+    padding: 24px 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__list {
+        display: flex;
+        gap: 32px;
+    }
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        font-weight: 700;
+        outline-offset: 6px;
+        border-radius: 6px;
+        transition: color 0.3s, outline 0.3s, border-color 0.3s;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            transition: background-color 0.3s;
+        }
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:focus {
+            outline: 1px solid $accent;
+        }
+
+        &:active {
+            color: $accent;
+
+            &::after {
+                background-color: $accent;
+            }
+        }
+    }
+}
+
+.user-menu {
+    display: flex;
+    gap: 16px;
+}
+
+.switcher-lang {
+    position: relative;
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        gap: 8px;
+        outline-offset: 5px;
+        border-radius: 15px;
+        padding: 10px 12px 10px 10px;
+        transition: color 0.3s, outline 0.3s;
+
+        &::after {
+            background: linear-gradient(27.35deg, $accent-opacity-00 70.32%, $accent 94.79%), linear-gradient(200.43deg, $accent-opacity-00 65.44%, $accent 100%);
+        }
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:focus {
+            outline: 1px solid $accent;
+        }
+
+        &:active {
+            &::after {
+                background: linear-gradient(27.35deg, $accent-opacity-00 70.32%, $accent 94.79%), linear-gradient(200.43deg, $accent-opacity-00 65.44%, $accent 100%);
+            }
+        }
+    }
+
+    &__list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        padding: 56px 0 12px;
+        max-width: 100px;
+        width: 100%;
+    }
+
+    &__link {
+        padding: 12px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 700;
+        gap: 6px;
+        width: 100%;
+    }
+}
