@@ -314,6 +314,15 @@
         }
       }
     }
+    &__progress-box {
+      &--upload,
+      &--latency {
+        bottom: -9px;
+      }
+      &--download {
+        bottom: -14px;
+      }
+    }
     &__info {
       margin-bottom: 37px;
       &--download {
@@ -348,6 +357,17 @@
     &--upload,
     &--latency {
       width: 260px;
+      padding: 50px 24px 16px;
+     .metric-card__value-num {
+        font-size: 24px;
+      }
+      .metric-card__value-name {
+        font-size: 16px;
+      }
+      .metric-card__progress-box svg {
+        width: 100%;
+        height: auto;
+      }
     }
 
     &--download {
@@ -358,6 +378,15 @@
         width: 100%;
         height: auto;
       }
+    }
+    &__label {
+      font-size: 24px;
+    }
+    &__info {
+      margin-bottom: 56px;
+    }
+    &__note {
+      font-size: 16px;
     }
 
   }
