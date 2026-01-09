@@ -24,6 +24,14 @@
         display: flex;
         margin-right: auto;
         gap: 32px;
+
+        &.blur-plate {
+            background-color: transparent;
+
+            &::after {
+                background: linear-gradient(transparent);
+            }
+        }
     }
 
     &__link {
@@ -32,7 +40,7 @@
         font-weight: 700;
         outline-offset: 6px;
         border-radius: 6px;
-        transition: color 0.3s, outline 0.3s, border-color 0.3s;
+        transition: color 0.3s, outline 0.3s, border-color 0.3s, padding 0.4s;
 
         &::after {
             content: "";
@@ -200,6 +208,29 @@
         border-radius: 15px;
         transition: outline 0.3s;
 
+        &.is-open {
+            .mobile-button__line {
+                width: 0;
+
+                &::before,
+                &::after {
+                    width: 18px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: $accent;
+                }
+
+                &::before {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+
+                &::after {
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+        }
+
         &.blur-plate::after {
             padding: 1px;
             background: linear-gradient(53.35deg, rgba(255, 255, 255, 0) 67.32%, rgba(255, 255, 255, 0.6) 97.79%), linear-gradient(224.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%);
@@ -213,6 +244,7 @@
             height: 2px;
             border-radius: 2px;
             background-color: $accent;
+            transition: width 0.5s;
 
             &::before,
             &::after {
@@ -221,7 +253,7 @@
                 border-radius: 2px;
                 background-color: $light;
                 height: 2px;
-                transition: background-color 0.3s;
+                transition: background-color 0.5s, width 0.5s, transform 0.5s, color 0.5s;
             }
 
             &::before {
@@ -257,12 +289,60 @@
     }
 
     .menu {
+        position: relative;
+
         &__list {
-            display: none;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            padding: 0;
+            max-width: 140px;
+            width: 100%;
+            display: block;
+
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-40px);
+            transition: transform 0.6s, opacity 0.4s, padding 0.4s, max-width 0.4s;
+
+            &.is-open {
+                opacity: 1;
+                pointer-events: all;
+                transform: translateY(0);
+                padding: 12px 0;
+                max-width: 157px;
+
+                .menu__link {
+                    padding: 12px 24px 12px 0;
+                }
+            }
+
+            &.blur-plate {
+                background: linear-gradient(-114deg, $light-opacity-01 0%, $light-opacity-06 100%);
+
+                &::after {
+                    padding: 1px;
+                    background: linear-gradient(43.35deg, rgba(255, 255, 255, 0) 70.32%, rgba(255, 255, 255, 0.6) 94.79%), linear-gradient(232.43deg, rgba(255, 255, 255, 0) 66.44%, rgba(255, 255, 255, 0.6) 100%);
+                }
+            }
+        }
+
+        &__link {
+            outline-offset: 0;
+            text-align: right;
+            display: block;
+            padding: 0;
         }
     }
 
     .user-menu {
         margin-right: 16px;
+    }
+}
+
+@media(max-width: 768px) {
+    .user-menu {
+        gap: 8px;
+        margin-right: 8px;
     }
 }

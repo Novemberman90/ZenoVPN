@@ -134,3 +134,11 @@ body {
     }
 }
 
+@media (max-width:768px) {
+    .cta {
+        &__icon {
+            display: none;
+        }
+    }
+}
+
