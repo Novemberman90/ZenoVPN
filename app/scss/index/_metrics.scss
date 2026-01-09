@@ -78,6 +78,8 @@
     &.blur-plate::after {
       border-radius: 24px;
       padding: 1px;
+      background: linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%),
+     linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%);
     }
   }
 
@@ -92,6 +94,7 @@
     &.blur-plate::after {
       border-radius: 14px;
       padding: 1px;
+      background: linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%), linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%);
     }
   }
 
@@ -133,6 +136,10 @@
     max-width: 260px;
     width: 260px;
     padding: 50px 24px 16px;
+      &.blur-plate::after {
+       background: linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%),
+      linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%);
+    }
   }
 
   &--download {
