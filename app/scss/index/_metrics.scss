@@ -142,6 +142,10 @@
     .metric-card__value-num {
       font-size: 32px;
     }
+    &.blur-plate::after {
+      background:  linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%),
+        linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%);
+    }
   }
 
   &__info {
@@ -253,7 +257,7 @@
     &__card {
       &--upload,
       &--latency {
-        flex: 0 0 168px;
+        flex: 0 0 171px;
       }
     }
     &__card-icon {
@@ -298,8 +302,8 @@
     &--upload,
     &--latency {
       padding: 50px 10px 10px;
-      width: 168px;
-      flex: 0 0 168px;
+      width: 171px;
+      flex: 0 0 171px;
       .metric-card__value-num {
         font-size: 18px;
       }
@@ -346,6 +350,21 @@
     }
     &__cards {
       gap: 24px 12px;
+    }
+    &__card{
+      &--upload,
+      &--latency {
+        flex: 168px;
+      }
+
+    }
+  }
+  .metric-card {
+    &--upload,
+    &--latency {
+      padding: 50px 10px 10px;
+      width: 168px;
+      flex: 0 0 168px;
     }
   }
 }
