@@ -1,6 +1,7 @@
 .ready {
   position: relative;
   overflow: hidden;
+
   &__inner {
     display: flex;
     padding: 0 0 0 34px;
@@ -16,20 +17,20 @@
       inset: 0;
       z-index: -1;
 
-    /* WebP 1x — ОСНОВНОЕ */
+      /* WebP 1x — ОСНОВНОЕ */
       background-image: url('../images/ready/ready-gradient.webp');
-    
+
       /* WebP 2x */
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
         background-image: url('../images/ready/ready-gradient-x2.webp');
       }
-    
+
       /* PNG fallback, если WebP не поддерживается */
       @supports not (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
         background-image: url('../images/ready/ready-gradient.png');
-    
+
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
@@ -38,9 +39,11 @@
       }
     }
   }
+
   &__img-box {
     margin-top: auto;
   }
+
   &__img {
     max-width: 529px;
     width: 100%;
@@ -56,12 +59,13 @@
     flex-direction: column;
   }
 
-  &__title{
+  &__title {
     display: block;
     margin-bottom: 12px;
     text-align: inherit;
     @include GoogleSans-500;
   }
+
   &__title-accent {
     color: $accent;
   }
@@ -75,11 +79,13 @@
   &__item {
     display: flex;
     flex-direction: column;
+
     &--support {
       flex: 0 0 183px;
       max-width: 183px;
       width: 100%;
     }
+
     &--guarantee {
       flex: 1 1 auto;
       width: 100%;
@@ -91,20 +97,25 @@
     height: auto;
     margin-bottom: 21px;
   }
+
   &__item-descr {
     font-size: 18px;
   }
+
   &__item-accent {
     display: block;
     color: $accent;
   }
-  &__cta  {
+
+  &__cta {
     gap: 6px;
     width: max-content;
   }
+
   &__cta-text {
     padding: 16px 32px;
   }
+
   &__cta-icon {
     width: 55px;
     height: 55px;
@@ -122,16 +133,19 @@
     }
   }
 }
+
 @media(max-width: 928px) {
   .ready {
     &__inner {
       padding: 0;
       justify-content: flex-end;
       gap: 0;
+
       &::before {
         background-position: left bottom;
       }
     }
+
     &__img-box {
       position: absolute;
       left: -18%;
@@ -139,6 +153,7 @@
     }
   }
 }
+
 @media(max-width: 860px) {
   .ready {
     &__inner {
@@ -148,34 +163,37 @@
         width: auto;
       }
     }
+
     &__img-box {
       left: -21%;
     }
   }
 }
+
 @media(max-width: 767px) {
   .ready {
     &__inner {
       flex-direction: column-reverse;
       align-items: center;
+
       &::before {
         background-size: contain;
         left: auto;
         width: 100%;
-      /* WebP 1x — ОСНОВНОЕ */
+        /* WebP 1x — ОСНОВНОЕ */
         background-image: url('../images/ready/ready-gradient-mob.webp');
-      
+
         /* WebP 2x */
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
           background-image: url('../images/ready/ready-gradient-mob-x2.webp');
         }
-      
+
         /* PNG fallback, если WebP не поддерживается */
         @supports not (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
           background-image: url('../images/ready/ready-gradient-mob.png');
-      
+
           @media (min-device-pixel-ratio: 2),
           (min-resolution: 192dpi),
           (min-resolution: 2dppx) {
@@ -184,43 +202,52 @@
         }
       }
     }
+
     &__title {
       text-align: center;
     }
+
     &__img-box {
       position: static;
       margin-top: 0;
     }
+
     &__content {
       padding: 0;
       margin-bottom: 32px;
     }
-    &__info  {
+
+    &__info {
       gap: 16px;
       justify-content: space-between;
     }
+
     &__item {
       align-items: center;
+
       &--support {
         flex: 1 1 50%;
         max-width: 171px;
         width: 100%;
       }
-    
+
       &--guarantee {
         flex: 1 1 50%;
         max-width: 171px;
         width: 100%;
       }
     }
+
     &__item-descr {
       text-align: center;
     }
+
     &__cta {
       margin: 0 auto;
     }
   }
 }
+
 @media(max-width: 568px) {
   .ready {
     &__title {
@@ -228,65 +255,72 @@
       text-wrap: balance;
       margin-bottom: 25px;
     }
+
     &__img {
       max-width: 309px;
     }
-    &__info  {
+
+    &__info {
       margin-bottom: 25px;
       justify-content: center;
     }
+
     &__item {
       align-items: center;
+
       &--support {
         flex: 1 1 50%;
         max-width: 171px;
         width: 100%;
       }
-    
+
       &--guarantee {
         flex: 1 1 50%;
         max-width: 171px;
         width: 100%;
       }
     }
- 
+
     &__icon {
       width: 56px;
       height: 56px;
       margin-bottom: 12px;
     }
+
     &__item-descr {
       font-size: 16px;
     }
+
     &__cta {
       margin: 0 auto;
     }
   }
 }
+
 @media(max-width: 390px) {
   .ready {
     &__cta-text {
       font-size: 16px;
       padding: 16px 20px;
     }
+
     &__cta-icon {
       width: 52px;
       height: 52px;
     }
   }
 }
+
 @media(max-width: 340px) {
   .ready {
     &__cta-text {
       font-size: 14px;
       padding: 16px 18px;
     }
+
     &__cta-icon {
       width: 50px;
       height: 50px;
     }
   }
 }
-
-
-
