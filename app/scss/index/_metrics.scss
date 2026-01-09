@@ -32,7 +32,6 @@
     color: $accent;
   }
   &__item-subtitle {
-    font-weight: 400;
     font-size: 16px;
   }
   &__info {
@@ -182,7 +181,6 @@
     font-size: 24px;
     color: $accent;
     margin-bottom: 2px;
-    text-align: center;
     display: inline-block;
     &--download {
       font-size: 32px;
@@ -194,10 +192,9 @@
 
 
   &__note {
-    font-weight: 400;
     font-size: 16px;
     color: $light;
-    text-align: center;
+    
   }
 
   &__progress-box {
