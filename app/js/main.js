@@ -31,7 +31,7 @@ let swiper;
 let currentDirection;
 
 function getDirection() {
-  return window.innerWidth >= 1024 ? 'vertical' : 'horizontal';
+  return window.innerWidth >= 1025 ? 'vertical' : 'horizontal';
 }
 
 function initSwiper() {
@@ -52,7 +52,7 @@ function initSwiper() {
 
     coverflowEffect: {
       rotate: 0,
-      stretch: currentDirection === 'vertical' ? 215 : 0,
+      stretch: 280,
       depth: 150,
       modifier: 1,
       slideShadows: false,
@@ -61,8 +61,12 @@ function initSwiper() {
     breakpoints: {
       0: {
         direction: 'horizontal',
+        coverflowEffect: {
+          stretch: 256,
+          depth: 190,
+        },
       },
-      1024: {
+      1025: {
         direction: 'vertical',
       },
     },
