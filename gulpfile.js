@@ -22,6 +22,7 @@ function styles() {
 
 function scripts() {
     return src([
+      'node_modules/swiper/swiper-bundle.min.js',
         'node_modules/jquery/dist/jquery.js',
         'app/js/main.js'
     ])
