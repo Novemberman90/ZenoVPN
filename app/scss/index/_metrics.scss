@@ -251,6 +251,13 @@
     &__item-title {
       font-size: 18px;
     }
+    &__item {
+      &:last-child {
+        .metrics__item-subtitle {
+          text-wrap: nowrap;
+        }
+      }
+    }
     &__item-subtitle {
       font-size: 14px;
     }
