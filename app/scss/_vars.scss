@@ -9,3 +9,16 @@ $light-opacity-01: rgba(255, 255, 255, 0.01);
 $light-opacity-00: rgba(255, 255, 255, 0);
 
 $dark: #0B1217;
+
+@mixin GoogleSans-400 {
+  font-family: "Google Sans", sans-serif;
+  font-weight: 400;
+}
+@mixin GoogleSans-500 {
+  font-family: "Google Sans", sans-serif;
+  font-weight: 500;
+}
+@mixin GoogleSans-700 {
+  font-family: "Google Sans", sans-serif;
+  font-weight: 700;
+}

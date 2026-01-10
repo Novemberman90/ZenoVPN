@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('../../components/head.html', {
+  "title": 'Fast & Secure ZenoVPN for Online Privacy',
+  "metaDescription": "ZenoVPN provides fast, secure, and private internet access. Protect your data, bypass restrictions, and enjoy true online freedom worldwide.",
+  "twitterTitle": "Fast & Secure Online Privacy with ZenoVPN",
+  "twitterDescription": "Protect your privacy, browse securely, and access global content with ZenoVPN. High speed, strong encryption, and no limits.",
+  "canonical": "https://zenovpn.com/",
+  "extraDots": ".."
+  })
+<body>
+  <main>
+    <section class="ready">
+      <div class="container">
+        <div class="ready__inner">
+          <div class="ready__img-box">
+            <picture>
+              <!-- Mobile (<576px) -->
+              <source media="(max-width: 575px)" type="image/webp" srcset="../images/ready/astronaut-ready-mob.webp 1x,../images/ready/astronaut-ready-mob-x2.webp 2x" />
+              <source media="(max-width: 575px)" type="image/png" srcset="../images/ready/astronaut-ready-mob.png 1x,../images/ready/astronaut-ready-mob-x2.png 2x" />
+            
+              <!-- Desktop -->
+              <source type="image/webp" srcset="
+                ../images/ready/astronaut-ready.webp 1x, ../images/ready/astronaut-ready-x2.webp 2x" />
+              <source type="image/png" srcset="../images/ready/astronaut-ready.png 1x, ../images/ready/astronaut-ready-x2.png 2x" />
+            
+              <img class="ready__img" src="../images/ready/astronaut-ready.png" width="529" height="564"
+                alt="ZenoVPN Ready to Think Free" loading="lazy" />
+            </picture>
+          </div>
+          <div class="ready__content">
+            <h2 class="title ready__title">
+              Готовы быть <span class="ready__title-accent">свободным?</span>
+            </h2>
+            <div class="ready__info">
+              <div class="ready__item ready__item--support">
+                <picture>
+                  <source type="image/webp" srcset="../images/ready/earphones.webp 1x, ../images/ready/earphones-x2.webp 2x" />
+                  <source type="image/png" srcset="../images/ready/earphones.png 1x, ../images/ready/earphones-x2.png 2x" />
+                  <img class="ready__icon" src="../images/ready/earphones.png" width="64" height="64"
+                    alt="ZenoVPN 24/7 поддержка через Telegram ?" loading="lazy" />
+                </picture>
+                <div class="ready__item-descr">
+                  24/7
+                  <span class="ready__item-accent">поддержка</span>
+                  через Telegram
+                </div>
+              </div>
+              <div class="ready__item ready__item--guarantee">
+                <picture>
+                  <source type="image/webp" srcset="../images/ready/guarantee.webp 1x, ../images/ready/guarantee-x2.webp 2x" />
+                  <source type="image/png" srcset="../images/ready/guarantee.png 1x, ../images/ready/guarantee-x2.png 2x" />
+                  <img class="ready__icon" src="../images/ready/guarantee.png" width="64" height="64"
+                    alt="ZenoVPN 30 дней возврат денег гарантированно" loading="lazy" />
+                </picture>              
+                <div class="ready__item-descr">
+                  30 дней
+                  <span class="ready__item-accent">возврат денег</span>
+                  гарантированно
+                </div>
+              </div>
+            </div>
+            @@include('../../components/cta.html', {
+            "ctaClass":"ready__cta",
+            "ctaText": "Начните работу в Telegram",
+            "ctaWidth": "24",
+            "ctaHeight": "24",
+            "ctaIcon": "telegram",
+            "ctaIconClass": "ready__cta-icon",
+            "ctaTextClass": "ready__cta-text",
+            "extraDots": ".."
+            })
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../js/main.min.js"></script>
+</body>
+
+</html>

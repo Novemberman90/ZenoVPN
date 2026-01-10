@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html  lang="ar" dir="rtl">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -44,7 +43,7 @@
         rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
 </head>
 
 <body>
@@ -55,67 +54,59 @@
           <div class="ready__img-box">
             <picture>
               <!-- Mobile (<576px) -->
-              <source media="(max-width: 575px)" type="image/webp" srcset="
-                  ./images/ready/astronaut-ready-mob.webp 1x,
-                  ./images/ready/astronaut-ready-mob-x2.webp 2x
-                " />
-              <source media="(max-width: 575px)" type="image/png" srcset="
-                  ./images/ready/astronaut-ready-mob.png 1x,
-                  ./images/ready/astronaut-ready-mob-x2.png 2x
-                " />
-
+              <source media="(max-width: 575px)" type="image/webp"
+                srcset="../images/ready/astronaut-ready-mob.webp 1x,../images/ready/astronaut-ready-mob-x2.webp 2x" />
+              <source media="(max-width: 575px)" type="image/png"
+                srcset="../images/ready/astronaut-ready-mob.png 1x,../images/ready/astronaut-ready-mob-x2.png 2x" />
+            
               <!-- Desktop -->
-              <source type="image/webp" srcset="
-                  ./images/ready/astronaut-ready.webp 1x,
-                  ./images/ready/astronaut-ready-x2.webp 2x
-                " />
-              <source type="image/png" srcset="
-                  ./images/ready/astronaut-ready.png 1x,
-                  ./images/ready/astronaut-ready-x2.png 2x
-                " />
-
-              <img class="ready__img" src="./images/ready/astronaut-ready.png" width="529" height="564"
-                alt="ZenoVPN Ready to Think Free" loading="lazy" />
+              <source type="image/webp" srcset="../images/ready/astronaut-ready.webp 1x, ../images/ready/astronaut-ready-x2.webp 2x" />
+              <source type="image/png" srcset="../images/ready/astronaut-ready.png 1x, ../images/ready/astronaut-ready-x2.png 2x" />
+            
+              <img class="ready__img" src="../images/ready/astronaut-ready.png" width="529" height="564"
+                alt="هل أنت مستعد للتفكير بحرية؟" loading="lazy" />
             </picture>
           </div>
           <div class="ready__content">
             <h2 class="title ready__title">
-              Ready to Think <span class="ready__title-accent">Free?</span>
+              هل أنت مستعد للتفكير <span class="ready__title-accent">بحرية؟</span>
             </h2>
             <div class="ready__info">
               <div class="ready__item ready__item--support">
                 <picture>
-                  <source type="image/webp" srcset="./images/ready/earphones.webp 1x, ./images/ready/earphones-x2.webp 2x" />
-                  <source type="image/png" srcset="./images/ready/earphones.png 1x, ./images/ready/earphones-x2.png 2x" />
-                  <img class="ready__icon" src="./images/ready/earphones.png" width="64" height="64" alt="ZenoVPN customer support 24/7 via Telegram" loading="lazy" />
+                  <source type="image/webp" srcset="../images/ready/earphones.webp 1x, ../images/ready/earphones-x2.webp 2x" />
+                  <source type="image/png" srcset="../images/ready/earphones.png 1x, ../images/ready/earphones-x2.png 2x" />
+                  <img class="ready__icon" src="../images/ready/earphones.png" width="64" height="64" alt="دعم العملاء على مدار الساعة طوال أيام الأسبوع
+عبر Telegram" loading="lazy" />
                 </picture>
                 <div class="ready__item-descr">
-                  24/7
-                  <span class="ready__item-accent">customer support</span>
-                  via Telegram
+                  دعم العملاء على مدار
+                  <span class="ready__item-accent">
+                    الساعة طوال أيام الأسبوع
+                  </span>
+                  عبر Telegram
                 </div>
               </div>
               <div class="ready__item ready__item--guarantee">
                 <picture>
-                  <source type="image/webp" srcset="./images/ready/guarantee.webp 1x, ./images/ready/guarantee-x2.webp 2x" />
-                  <source type="image/png" srcset="./images/ready/guarantee.png 1x, ./images/ready/guarantee-x2.png 2x" />
-                  <img class="ready__icon" src="./images/ready/guarantee.png" width="64" height="64" alt="ZenoVPN 30-day money-back guarantee"
-                    loading="lazy" />
+                  <source type="image/webp" srcset="../images/ready/guarantee.webp 1x, ../images/ready/guarantee-x2.webp 2x" />
+                  <source type="image/png" srcset="../images/ready/guarantee.png 1x, ../images/ready/guarantee-x2.png 2x" />
+                  <img class="ready__icon" src="../images/ready/guarantee.png" width="64" height="64" alt="ضمان استرداد الأموال لمدة 30 يومًا" loading="lazy" />
                 </picture>
                 <div class="ready__item-descr">
-                  30-day
-                  <span class="ready__item-accent">money-back</span>
-                  guarantee
+                  ضمان استرداد
+                  <span class="ready__item-accent">الأموال لمدة 30</span>
+                  يومًا
                 </div>
               </div>
             </div>
             <a class="cta ready__cta" href="https://t.me/ZenoVPNBot" target="_blank">
     <span class="cta__text ready__cta-text">
-        Get Started in Telegram
+        ابدأ في Telegram
     </span>
     <span class="cta__icon ready__cta-icon">
         <svg class="icon" width="24" height="24">
-            <use href="./images/sprite.svg#telegram"></use>
+            <use href="../images/sprite.svg#telegram"></use>
         </svg>
     </span>
 </a>
@@ -124,7 +115,7 @@
       </div>
     </section>
   </main>
-    <script src="js/main.min.js"></script>  
+  <script src="../js/main.min.js"></script>
 </body>
 
 </html>
