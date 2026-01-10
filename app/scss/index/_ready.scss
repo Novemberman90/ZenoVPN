@@ -3,10 +3,12 @@
   overflow: hidden;
   max-width: 1440px;
   margin: 0 auto;
+
   &__inner {
     display: flex;
     padding: 0 0 0 34px;
     gap: 96px;
+
     &::before {
       content: '';
       position: absolute;
@@ -19,7 +21,7 @@
       z-index: -1;
     }
 
-/*     &::before {
+    /*     &::before {
       content: "";
       position: absolute;
       background-position: 0 bottom;
@@ -50,7 +52,7 @@
         }
       }
     } */
-     
+
   }
 
   &__img-box {
@@ -154,7 +156,7 @@
       justify-content: flex-end;
       gap: 0;
 
-    /*   &::before {
+      /*   &::before {
         background-position: left bottom;
       } */
     }
@@ -201,7 +203,7 @@
         z-index: -1;
       }
 
-  /*     &::before {
+      /*     &::before {
         background-size: contain;
         left: auto;
         width: 100%;
@@ -276,7 +278,7 @@
 @media(max-width: 568px) {
   .ready {
     &__inner {
-    &::before {
+      &::before {
         content: '';
         position: absolute;
         width: 100%;
@@ -288,6 +290,7 @@
         z-index: -1;
       }
     }
+
     &__title {
       font-size: 40px;
       text-wrap: balance;
