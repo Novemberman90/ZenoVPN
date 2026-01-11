@@ -40,13 +40,11 @@
   &__img {
     position: absolute;
     max-width: 593px;
-    top: 18px;
+    top: 0;
     right: 0;
     z-index: -1;
   }
-  .icon {
-    fill: currentColor;
-  }
+
   &__nav {
     display: flex;
     align-items: center;
@@ -62,7 +60,7 @@
     outline-offset: 6px;
     border: 1px solid transparent;
     color: $light;
-    transition: all .3s;
+    transition: color .3s, box-shadow .3s;
     &--prev {
       bottom: 0;
       top: auto;
@@ -72,56 +70,38 @@
       }
     }
     &.blur-plate {
-      background: linear-gradient(75.18deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.06) 100%);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-
+      transition: all .3s;
+      background: linear-gradient(231.87deg, rgba(255, 255, 255, 0.18) -30.13%, rgba(255, 255, 255, 0.03) 57.05%, rgba(255, 255, 255, 0.12) 137.89%);
     &::after {
       border-radius: 14px;
       padding: 1px;
-      background: linear-gradient(255.18deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+      background: linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%);
      }
    }
   }
+  
   &__nav--next.blur-plate,
   &__nav--prev.blur-plate{
     transition: all .3s;
     .icon {
-      transition: all .3s;
+      transition: color .3s;
     }
     &:hover {
-      
       color: $accent;
-      background: linear-gradient(231.87deg, rgba(255, 255, 255, 0.18) -30.13%, rgba(255, 255, 255, 0.03) 57.05%, rgba(255, 255, 255, 0.12) 137.89%);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
       
-      &::after {
-        padding: 1px;
-        background: linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%);
-        
-      }
     }
     &:active {
-      background: linear-gradient(231.87deg, rgba(255, 255, 255, 0.18) -30.13%, rgba(255, 255, 255, 0.03) 57.05%, rgba(255, 255, 255, 0.12) 137.89%);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-    
       &::after {
-        padding: 1px;
         background: linear-gradient(227.43deg, rgba(255, 215, 0, 0) 65.44%, #FFD700 100%),
           linear-gradient(47.67deg, rgba(255, 215, 0, 0) 67.58%, #FFD700 100.69%);
-         
       }
     }
     &:focus {
       outline: 1px solid $accent;
-      background: linear-gradient(231.87deg, rgba(255, 255, 255, 0.18) -30.13%, rgba(255, 255, 255, 0.03) 57.05%, rgba(255, 255, 255, 0.12) 137.89%);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-
+      .icon {
+        color: $light;
+      }
       &::after {
-        padding: 1px;
         background: linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%);
         
       }
@@ -436,6 +416,21 @@
     }
     &__stat-name {
       font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 389px) {
+  .reviews {
+    &__stats{
+      gap: 12px;
+    }
+    &__stat {
+      flex-direction: column;
+      padding: 10px;
+    }
+    &__stat-num {
+      font-size: 18px;
     }
   }
 }
