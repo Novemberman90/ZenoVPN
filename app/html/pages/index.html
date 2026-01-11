@@ -191,7 +191,11 @@
         <!-- Bottom stats -->
         <div class="reviews__stats">
           <div class="reviews__stat blur-plate">
-            <img class="reviews__stat-img" src="./images/reviews/users.png" alt="Active Users">
+            <picture>
+              <source type="image/webp" srcset="./images/reviews/users.webp 1x, ./images/reviews/users-x2.webp 2x" />
+              <source type="image/png" srcset="./images/reviews/users.png 1x, ./images/reviews/users-x2.png 2x" />
+              <img class="reviews__stat-img" src="./images/reviews/users.webp" alt="Active Users" width="64" height="64"loading="lazy" />
+            </picture>
             <div class="reviews__stat-content">
               <span class="reviews__stat-num">15K+</span>
               <span class="reviews__stat-name">Active Users</span>
@@ -199,7 +203,11 @@
           </div>
     
           <div class="reviews__stat blur-plate">
-            <img class="reviews__stat-img" src="./images/reviews/rev-guarantee.png" alt="Uptime Guarantee">
+            <picture>
+            <source type="image/webp" srcset="./images/reviews/rev-guarantee.webp 1x, ./images/reviews/rev-guarantee-x2.webp 2x" >
+            <source type="image/png" srcset="./images/reviews/rev-guarantee.png 1x, ./images/reviews/rev-guarantee-x2.png 2x" />
+            <img class="reviews__stat-img" src="./images/reviews/rev-guarantee.webp" alt="Active Users" width="64" height="64" loading="lazy" />
+            </picture>
             <div class="reviews__stat-content">
               <span class="reviews__stat-num">99.9%</span>
               <span class="reviews__stat-name">Uptime Guarantee</span>
@@ -207,7 +215,11 @@
           </div>
     
           <div class="reviews__stat blur-plate">
-            <img class="reviews__stat-img" src="./images/reviews/support.png" alt="Customer Support">
+            <picture>
+            <source type="image/webp" srcset="./images/reviews/support.webp 1x, ./images/reviews/support-x2.webp 2x" />
+              <source type="image/png" srcset="./images/reviews/support.png 1x,./images/reviews/support-x2.png 2x" />
+              <img class="reviews__stat-img" src="./images/reviews/support.webp" width="64" height="64" alt="Active Users" loading="lazy" />
+            </picture>
             <div class="reviews__stat-content">
               <span class="reviews__stat-num">24/7</span>
               <span class="reviews__stat-name">Customer Support</span>
