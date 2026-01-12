@@ -105,4 +105,12 @@ body {
 }
 .icon {
   fill: currentColor;
+  transition: color .3s;
 }
+ a,
+ button {
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ }
+ .accent {
+   color: $accent;
+ }

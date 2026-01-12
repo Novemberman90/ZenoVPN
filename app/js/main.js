@@ -169,10 +169,21 @@ const initSwiper = () => {
 
   swiper = new Swiper('.reviews-slider', {
     effect: 'coverflow',
-    grabCursor: true,
+    initialSlide: 1,
+    grabCursor: false,
     centeredSlides: true,
     slidesPerView: 'auto',
     direction: 'vertical', // фактически управляется breakpoints
+    modifier: 1,
+    mousewheel: false,
+    keyboard: false,
+    allowTouchMove: false,
+    speed: 750,
+    on: {
+      init(swiper) {
+        swiper.update();
+      }
+    },
 
     navigation: {
       nextEl: '.reviews__nav--next',
