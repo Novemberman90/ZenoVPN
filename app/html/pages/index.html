@@ -15,9 +15,9 @@
     <section class="reviews section">
       <div class="container">
         <h2 class="reviews__title title">What Our <span class="accent">Customers Say</span></h2>
-        <h2 class="visually-hidden">What Our Customers Say</h2>
         <div class="reviews__inner">
           <div class="reviews__slider">
+            <span class="visually-hidden">carousel</span>
             <div class="swiper reviews-slider">
               <div class="swiper-wrapper">
                 <!-- Slide -->
@@ -27,7 +27,7 @@
                       <picture>
                         <source type="image/webp" srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
                         <source type="image/png" srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
-                        <img class="review-card__avatar" src="./images/reviews/robert.webp" alt="Active Users" width="64" height="64"
+                        <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users" width="56" height="56"
                           loading="lazy" />
                       </picture>
                       <div class="review-card__user">
@@ -76,7 +76,7 @@
                       <picture>
                         <source type="image/webp" srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
                         <source type="image/png" srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
-                        <img class="review-card__avatar" src="./images/reviews/robert.webp" alt="Active Users" width="64" height="64"
+                        <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users" width="56" height="56"
                           loading="lazy" />
                       </picture>
                       <div class="review-card__user">
@@ -125,7 +125,7 @@
                       <picture>
                         <source type="image/webp" srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
                         <source type="image/png" srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
-                        <img class="review-card__avatar" src="./images/reviews/robert.webp" alt="Active Users" width="64" height="64"
+                        <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users" width="56" height="56"
                           loading="lazy" />
                       </picture>
                       <div class="review-card__user">
@@ -175,12 +175,14 @@
             <!-- Navigation -->
              <div class="reviews__nav-panel">
                <button class="reviews__nav reviews__nav--next blur-plate" type="button">
+                <span class="visually-hidden">next slide</span>
                  <svg class="reviews__nav-icon icon" width="24" height="24">
                    <use href="./images/sprite.svg#chevron"></use>
                  </svg>
                </button>
          
                <button class="reviews__nav reviews__nav--prev blur-plate" type="button">
+                <span class="visually-hidden">previous slide</span>
                  <svg class="reviews__nav-icon icon" width="24" height="24">
                    <use href="./images/sprite.svg#chevron"></use>
                  </svg>
@@ -209,9 +211,15 @@
         <div class="reviews__stats">
           <div class="reviews__stat blur-plate">
             <picture>
-              <source type="image/webp" srcset="./images/reviews/users.webp 1x, ./images/reviews/users-x2.webp 2x" />
+              <!-- mobile < 992 -->
+              <source media="(max-width: 992px)" type="image/webp" srcset="./images/reviews/users-tab.webp 1x,./images/reviews/users-tab-x2.webp 2x" />
+              <source media="(max-width: 992px)" type="image/png" srcset="./images/reviews/users-tab.png 1x, ./images/reviews/users-tab-x2.png 2x" />
+            
+              <!-- desktop -->
+              <source type="image/webp" srcset="./images/reviews/users.webp 1x,./images/reviews/users-x2.webp 2x" />
               <source type="image/png" srcset="./images/reviews/users.png 1x, ./images/reviews/users-x2.png 2x" />
-              <img class="reviews__stat-img" src="./images/reviews/users.webp" alt="Active Users" width="64" height="64"loading="lazy" />
+            
+              <img class="reviews__stat-img" src="./images/reviews/users.png" alt="Active Users" width="64" height="64" loading="lazy" />
             </picture>
             <div class="reviews__stat-content">
               <span class="reviews__stat-num">15K+</span>
@@ -221,10 +229,21 @@
     
           <div class="reviews__stat blur-plate">
             <picture>
-            <source type="image/webp" srcset="./images/reviews/rev-guarantee.webp 1x, ./images/reviews/rev-guarantee-x2.webp 2x" >
-            <source type="image/png" srcset="./images/reviews/rev-guarantee.png 1x, ./images/reviews/rev-guarantee-x2.png 2x" />
-            <img class="reviews__stat-img" src="./images/reviews/rev-guarantee.webp" alt="Active Users" width="64" height="64" loading="lazy" />
+              <!-- mobile < 992 -->
+              <source media="(max-width: 992px)" type="image/webp"
+                srcset="./images/reviews/rev-guarantee-tab.webp 1x, ./images/reviews/rev-guarantee-tab-x2.webp 2x" />
+              <source media="(max-width: 992px)" type="image/png"
+                srcset="./images/reviews/rev-guarantee-tab.png 1x, ./images/reviews/rev-guarantee-tab-x2.png 2x" />
+            
+              <!-- desktop -->
+              <source type="image/webp"
+                srcset="./images/reviews/rev-guarantee.webp 1x, ./images/reviews/rev-guarantee-x2.webp 2x" />
+              <source type="image/png" srcset="./images/reviews/rev-guarantee.png 1x, ./images/reviews/rev-guarantee-x2.png 2x" />
+            
+              <img class="reviews__stat-img" src="./images/reviews/rev-guarantee.png" alt="Active Users" width="64" height="64"
+                loading="lazy" />
             </picture>
+
             <div class="reviews__stat-content">
               <span class="reviews__stat-num">99.9%</span>
               <span class="reviews__stat-name">Uptime Guarantee</span>
@@ -233,10 +252,19 @@
     
           <div class="reviews__stat blur-plate">
             <picture>
-            <source type="image/webp" srcset="./images/reviews/support.webp 1x, ./images/reviews/support-x2.webp 2x" />
-              <source type="image/png" srcset="./images/reviews/support.png 1x,./images/reviews/support-x2.png 2x" />
-              <img class="reviews__stat-img" src="./images/reviews/support.webp" width="64" height="64" alt="Active Users" loading="lazy" />
+              <!-- mobile < 992 -->
+              <source media="(max-width: 992px)" type="image/webp"
+                srcset="./images/reviews/support-tab.webp 1x, ./images/reviews/support-tab-x2.webp 2x" />
+              <source media="(max-width: 992px)" type="image/png"
+                srcset="./images/reviews/support-tab.png 1x, ./images/reviews/support-tab-x2.png 2x" />
+            
+              <!-- desktop -->
+              <source type="image/webp" srcset="./images/reviews/support.webp 1x, ./images/reviews/support-x2.webp 2x" />
+              <source type="image/png" srcset="./images/reviews/support.png 1x, ./images/reviews/support-x2.png 2x" />
+            
+              <img class="reviews__stat-img" src="./images/reviews/support.png" alt="Active Users" width="64" height="64" loading="lazy" />
             </picture>
+
             <div class="reviews__stat-content">
               <span class="reviews__stat-num">24/7</span>
               <span class="reviews__stat-name">Customer Support</span>
