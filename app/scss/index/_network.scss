@@ -49,6 +49,9 @@
   max-width: 1080px;
   width: 100%;
   position: relative;
+  &__btn {
+    display: none;
+  }
   &__inner {
     display: flex;
     align-items: center;
@@ -138,12 +141,21 @@
     }
   }
   .countries {
-
     &__inner {
       max-height: 300px;
       margin-bottom: 17px;
+      position: relative;
       &.is-open {
         max-height: 2000px;
+      }
+      &::after {
+        position: absolute;
+        content: '';
+        background: linear-gradient(0deg, #D9D9D9 0%, #7E7E7E 62.03%, rgba(115, 115, 115, 0) 100%);
+        top: 0;
+        left: 0;
+        height: 300px;
+        width: 100%;
       }
     }
     &__name {
@@ -154,6 +166,7 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
+      margin: 0 auto ;
       color: $accent;
       transition: transform 0.3s;
       &.is-open {
