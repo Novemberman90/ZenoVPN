@@ -275,7 +275,7 @@
               "period": "1 month",
               "price": "Free",
               "showDiscount": false,
-              "showPopular": "false"
+              "showPopular": false
             })
           </li>
             <li class="plan__item blur-plate">
@@ -285,17 +285,17 @@
               "period": "1 month",
               "price": "$10",
               "showDiscount": false,
-              "showPopular": "false"
+              "showPopular": false
             })
           </li>
-            <li class="plan__item blur-plate">
+            <li class="plan__item blur-plate plan__item--popular">
             @@include('../components/plan-card.html', {
               "planCardClass": "plan-card--semi-annual",
               "title": "Semi-annual",
               "period": "6 months",
               "price": "$20",
               "showDiscount": true,
-              "showPopular": "true"
+              "showPopular": true
             })
           </li>
             <li class="plan__item blur-plate">
@@ -305,7 +305,7 @@
               "period": "12 months",
               "price": "$30",
               "showDiscount": true,
-              "showPopular": "true"
+              "showPopular": false
             })
           </li>
         </ul>

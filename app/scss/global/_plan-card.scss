@@ -1,4 +1,7 @@
 .plan-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
 
@@ -16,18 +19,82 @@
 
     &--trial::before {
         background-image: url('../images/plan/plan-trial.png');
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/plan/plan-trial-2x.png');
+        }
+
+        @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+            background-image: url('../images/plan/plan-trial.webp');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/plan/plan-trial-2x.webp');
+            }
+        }
     }
 
     &--monthly::before {
         background-image: url('../images/plan/plan-monthly.png');
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/plan/plan-monthly-2x.png');
+        }
+
+        @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+            background-image: url('../images/plan/plan-monthly.webp');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/plan/plan-monthly-2x.webp');
+            }
+        }
     }
 
     &--semi-annual::before {
         background-image: url('../images/plan/plan-semi-annual.png');
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/plan/plan-semi-annual-2x.png');
+        }
+
+        @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+            background-image: url('../images/plan/plan-semi-annual.webp');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/plan/plan-semi-annual-2x.webp');
+            }
+        }
     }
 
     &--annual::before {
         background-image: url('../images/plan/plan-annual.png');
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/plan/plan-annual-2x.png');
+        }
+
+        @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+            background-image: url('../images/plan/plan-annual.webp');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/plan/plan-annual-2x.webp');
+            }
+        }
     }
 
     &::after {
@@ -38,7 +105,7 @@
         transform: translateX(-50%) rotate(29deg);
         z-index: 5;
         width: 146px;
-        height: 28px;
+        height: 32px;
         -webkit-filter: blur(2px);
         filter: blur(4px);
         box-shadow: 4px 4px 170px #141a1f inset;
@@ -48,7 +115,6 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
-        position: relative;
         margin-bottom: 16px;
     }
 
@@ -72,17 +138,20 @@
 
     &__badge-popular {
         position: absolute;
-        top: 107px;
+        top: 82px;
         left: 50%;
         transform: translateX(-50%);
     }
 
     &__cta {
         gap: 6px;
+        margin-top: auto;
+        width: 100%;
     }
 
     &__cta-text {
         padding: 16px 35px;
+        flex-grow: 1;
     }
 
     &__icon {
