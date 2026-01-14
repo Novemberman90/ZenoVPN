@@ -121,6 +121,10 @@ body {
     color: $accent;
 }
 
+.icon {
+    fill: currentColor;
+}
+
 @media(max-width: 768px) {
     .section {
         padding-bottom: 112px;

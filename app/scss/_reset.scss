@@ -64,7 +64,6 @@ select {
 a {
     outline: transparent;
     text-decoration: none;
-    color: inherit;
 }
 
 address {
@@ -74,7 +73,12 @@ address {
 button {
     cursor: pointer;
     padding: 0;
+}
+
+a,
+button {
     color: inherit;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 button,
