@@ -149,4 +149,84 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   initMetricsObserver();
   initProgressBars();
+
+
+  const LANG_KEY = 'siteLang';
+
+  (function initGeo() {
+    // Перевірка fetch
+    if (typeof fetch !== 'function') {
+      console.warn('Fetch is not supported');
+      return;
+    }
+
+    fetch('https://ipwho.is/')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('GeoIP request failed');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Базова перевірка відповіді
+        if (!data || data.success !== true || !data.country_code) {
+          console.warn('GeoIP invalid data:', data);
+          return;
+        }
+
+        const countryCode = data.country_code; // UA, PL, DE, SA...
+
+        console.log('GeoIP country:', countryCode);
+
+        /* ===== 1. ПІДСВІТКА КРАЇНИ НА МАПІ ===== */
+        const flags = document.querySelectorAll(
+          `.map-flag[data-country="${countryCode}"]`
+        );
+
+        if (flags.length) {
+          flags.forEach(flag => flag.classList.add('is-active'));
+        }
+
+        /* ===== 2. ПЕРЕВІРКА ЗБЕРЕЖЕНОЇ МОВИ ===== */
+        const savedLang = localStorage.getItem(LANG_KEY);
+        if (savedLang) {
+          // Мова вже вибрана — гео тільки для мапи
+          return;
+        }
+
+        /* ===== 3. ВИЗНАЧЕННЯ МОВИ ПО РЕГІОНУ ===== */
+        let targetLang = 'en';
+
+        // RU-регіон
+        if (['RU', 'BY', 'KZ', 'UA'].includes(countryCode)) {
+          targetLang = 'ru';
+        }
+
+        // AR-регіон
+        if (['SA', 'AE', 'EG', 'QA', 'KW'].includes(countryCode)) {
+          targetLang = 'ar';
+        }
+
+        localStorage.setItem(LANG_KEY, targetLang);
+
+        /* ===== 4. РЕДІРЕКТ (ЛИШЕ ЯКЩО НЕ ТАМ) ===== */
+        const path = window.location.pathname;
+
+        if (targetLang === 'ru' && !path.startsWith('/ru/')) {
+          window.location.replace('/ru/index.html');
+          return;
+        }
+
+        if (targetLang === 'ar' && !path.startsWith('/ar/')) {
+          window.location.replace('/ar/index.html');
+          return;
+        }
+
+        // EN — залишаємося на поточній сторінці
+      })
+      .catch(error => {
+        console.warn('GeoIP error:', error);
+      });
+  })();
+
 });
