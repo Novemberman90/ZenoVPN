@@ -64,9 +64,11 @@
         position: relative;
         border-radius: 32px;
         padding: 0 23px 24px 24px;
+        background: linear-gradient(75.18deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.06) 100%);
 
         &::after {
             border-radius: 32px;
+            background-image: linear-gradient(55.35deg, rgba(255, 255, 255, 0) 70.32%, rgba(255, 255, 255, 0.6) 94.79%), linear-gradient(232.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%);;
         }
     }
 }
