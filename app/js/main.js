@@ -179,13 +179,40 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('GeoIP country:', countryCode);
 
         /* ===== 1. ПІДСВІТКА КРАЇНИ НА МАПІ ===== */
-        const flags = document.querySelectorAll(
+   /*      const flags = document.querySelectorAll(
           `.map-flag[data-country="${countryCode}"]`
         );
 
         if (flags.length) {
           flags.forEach(flag => flag.classList.add('is-active'));
-        }
+        } */  
+
+       /* ===== 1. ВИВІД КРАЇНИ В "YOUR LOCATION" ===== */
+          const countryItem = document.querySelector(
+            `.countries__item[data-country="${countryCode}"]`
+          );
+
+          const location = document.querySelector('.network__location');
+          const locationBox = document.querySelector('.network__location-box');
+
+          if (!countryItem || !location || !locationBox) {
+            // если страна не найдена — скрываем блок
+            if (location) {
+              location.classList.add('hidden');
+            }
+          } else {
+            // страна найдена — показываем блок
+            location.classList.remove('hidden');
+
+            // очищаем дефолт
+            locationBox.innerHTML = '';
+
+            // клонируем страну
+            const clonedItem = countryItem.cloneNode(true);
+
+            // вставляем в блок
+            locationBox.appendChild(clonedItem);
+          }
 
         /* ===== 2. ПЕРЕВІРКА ЗБЕРЕЖЕНОЇ МОВИ ===== */
         const savedLang = localStorage.getItem(LANG_KEY);
@@ -203,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // AR-регіон
-        if (['SA', 'AE', 'EG', 'QA', 'KW'].includes(countryCode)) {
+        if (['SA', 'AE', 'EG', 'QA', 'KW', 'SA', 'TR', 'IR', 'PK', 'EG', 'OM'].includes(countryCode)) {
           targetLang = 'ar';
         }
 
@@ -228,5 +255,17 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('GeoIP error:', error);
       });
   })();
+
+  /* ================= NETWORK: SHOW ALL COUNTRIES ================= */
+  const countries = document.querySelector('.countries__inner');
+  const toggleBtn = document.querySelector('.countries__btn');
+
+  if (countries && toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      countries.classList.toggle('is-open');
+      toggleBtn.classList.toggle('is-open');
+      
+    });
+  }
 
 });

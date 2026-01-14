@@ -20,12 +20,18 @@
     width: 100%;
     text-align: left;
   }
+  &__location {
+    &.hidden {
+      display: none;
+    }
+  }
   &__location-box {
     font-weight: 700;
     .countries__item.blur-plate {
       padding: 10px;
-      &::after {
-      background: linear-gradient(227.43deg, rgba(255, 215, 0, 0) 65.44%, rgba(255, 215, 0, 0.439216) 100%), linear-gradient(47.67deg, rgba(255, 215, 0, 0) 67.58%, rgba(255, 215, 0, 0.6) 100.69%);
+      backdrop-filter: blur(20px);
+      &::after {    
+        background: linear-gradient(197.43deg, rgba(255, 215, 0, 0) 65.44%, rgba(255, 215, 0, 0.439216) 100%), linear-gradient(47.67deg, rgba(255, 215, 0, 0) 67.58%, rgba(255, 215, 0, 0.6) 100.69%);
       }
     }
     .countries__icon {
@@ -42,12 +48,17 @@
 .countries {
   max-width: 1080px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px 13px;
-  padding: 0 20px;
+  position: relative;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 13px;
+    padding: 0 20px;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
   &__item {
     display: flex;
     align-items: center;
@@ -68,17 +79,21 @@
 
 @media (max-width: 992px) {
   .network {
+    background-image: url('../images/network/world-map-tab.svg');
+    background-position: center top;
+    padding-bottom: 112px;
     &__inner {
       padding: 0 16px;
     }
     &__head {
       justify-content: center;
       margin-bottom: 58px;
+      padding: 0;
     }
     &__title {
       text-align: center;
       max-width: 100%;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
     &__location {
       display: flex;
@@ -90,7 +105,62 @@
     }
   }
   .countries {
-    padding: 0 17px;
-    gap: 12px;  
+    &__inner {
+      padding: 0 25px;
+      gap: 12px 12px;
+    } 
+  }
+}
+
+@media (max-width: 576px) {
+  .network {
+    background-image: url('../images/network/world-map-mob.svg');
+    background-position: center top;
+    padding-bottom: 80px;
+    &__inner {
+      padding: 0;
+    }
+    &__head {
+      margin-bottom: 32px;
+    }
+    &__title {
+      font-size: 40px;
+    }
+
+    &__location-label {
+      font-size: 16px;
+    }
+    &__location-box {
+      .countries__icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  .countries {
+
+    &__inner {
+      max-height: 300px;
+      margin-bottom: 17px;
+      &.is-open {
+        max-height: 2000px;
+      }
+    }
+    &__name {
+      font-size: 16px;
+    } 
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: $accent;
+      transition: transform 0.3s;
+      &.is-open {
+        .countries__btn-icon {
+          transform: rotate(180deg);  
+        }    
+      }
+    }
   }
 }
