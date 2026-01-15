@@ -33,8 +33,11 @@
     .countries__item.blur-plate {
       padding: 10px 16px 10px 10px;
       backdrop-filter: blur(20px);
-      &::after {    
-        background: linear-gradient(197.43deg, rgba(255, 215, 0, 0) 65.44%, rgba(255, 215, 0, 0.439216) 100%), linear-gradient(47.67deg, rgba(255, 215, 0, 0) 67.58%, rgba(255, 215, 0, 0.6) 100.69%);
+      &::after { 
+        background:  linear-gradient(207.43deg, rgba(255, 215, 0, 0) 65.44%, rgba(255, 215, 0, 0.539216) 100%),
+        linear-gradient(27.67deg, rgba(255, 215, 0, 0) 67.58%, rgba(255, 215, 0, 0.6) 100.69%);
+
+
       }
     }
     .countries__icon {
@@ -43,11 +46,13 @@
     }
     .countries__name {
       font-size: 22px;
+      letter-spacing: normal;
     }
   }
   &__location-label {
     font-size: 18px;
     margin-bottom: 8px;
+    text-align: center;
   }
 }
 
@@ -63,7 +68,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px 13px;
+    gap: 12px;
     padding: 0 20px;
     overflow: hidden;
     transition: max-height 0.4s ease;
@@ -73,16 +78,14 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 8px;
+    padding: 8px 14px 8px 8px;
     &.blur-plate {
       border-radius: 12px;
-      &::after {
-          border-image-source: linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%);
-      }
     }
   }
   &__name {
     font-size: 18px;
+    letter-spacing: normal;
   }
 }
 
@@ -112,13 +115,14 @@
       align-items: center;
       gap: 24px;
     }
+    
     &__location-label {
       margin-bottom: 0;
     }
   }
   .countries {
     &__inner {
-      padding: 0 25px;
+      padding: 0 17px;
       gap: 12px 12px;
     } 
   }
