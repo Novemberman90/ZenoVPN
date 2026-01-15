@@ -2,13 +2,24 @@
   padding-bottom: 77px;
   &__wrapper {
     padding: 50px 0 51px;
-    background-image: url('../images/network/world-map.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../images/network/world-map.svg');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: contain;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
   }
   &__inner {
     padding: 0 54px;
+
   }
   &__head {
     display: flex;
@@ -92,10 +103,12 @@
 @media (max-width: 992px) {
   .network {
     padding-bottom: 112px;
+    position: relative;
     &__wrapper {
-      background-image: url('../images/network/world-map-tab.svg');
-      background-position: center top;
       padding-bottom: 0;
+      &::before {
+        background-image: url('../images/network/world-map-tab.svg');
+      }
     }
     &__inner {
       padding: 0 16px;
@@ -132,8 +145,10 @@
   .network {
     padding-bottom: 80px;
     &__wrapper {
-      background-image: url('../images/network/world-map-mob.svg');
-      background-position: center top;
+      &::before {
+        background-image: url('../images/network/world-map-mob.svg');
+      }
+   
       padding-top: 30px;
     }
     &__inner {
