@@ -30,6 +30,12 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
+    &:nth-child(3){
+      min-width: 71px;
+    }
+    &:nth-child(4){
+      min-width: 91px;
+    }
   }
 
   &__item-title {
@@ -269,6 +275,13 @@
     }
 
     &__item {
+      &:nth-child(3) {
+        min-width: 53px;
+      }
+    
+      &:nth-child(4) {
+        min-width: 73px;
+      }
       &:last-child {
         .metrics__item-subtitle {
           text-wrap: nowrap;
