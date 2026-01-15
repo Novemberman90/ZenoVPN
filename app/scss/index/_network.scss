@@ -47,8 +47,6 @@
       &::after { 
         background:  linear-gradient(207.43deg, rgba(255, 215, 0, 0) 65.44%, rgba(255, 215, 0, 0.539216) 100%),
         linear-gradient(27.67deg, rgba(255, 215, 0, 0) 67.58%, rgba(255, 215, 0, 0.6) 100.69%);
-
-
       }
     }
     .countries__icon {
@@ -178,7 +176,7 @@
   .countries {
     &__inner {
       max-height: 300px;
-      margin-bottom: 17px;
+      margin-bottom: 5px;
       padding: 0 20px;
       position: relative;
       &.is-open {
@@ -210,11 +208,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 100%;
       gap: 8px;
       margin: 0 auto ;
       color: $accent;
       outline-offset: 2px;
-      padding: 2px 8px;
+      padding: 12px 8px;
       transition: transform 0.3s, color 0.3s, opacity 0.3s, outline 0.3s;
       &.is-open {
         .countries__btn-icon {
