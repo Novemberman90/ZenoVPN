@@ -1,0 +1,346 @@
+.hero {
+    padding: 40px 0 64px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        z-index: -1;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 716px;
+        height: 772px;
+        background-image: url('../images/advantages/astronaut.png');
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/advantages/astronaut-2x.png');
+        }
+
+        @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+            background-image: url('../images/advantages/astronaut.webp');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/advantages/astronaut-2x.webp');
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -187px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 759px;
+        height: 223px;
+        background-color: $accent;
+        filter: blur(200px);
+        z-index: -3;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__statement {
+        max-width: 343px;
+        width: 100%;
+        margin-bottom: 112px;
+    }
+
+    &__statement-title {
+        display: inline-block;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        letter-spacing: normal;
+    }
+
+    &__headline {
+        max-width: 270px;
+        width: 100%;
+    }
+
+    &__title {
+        display: inline-block;
+        font-size: 96px;
+        font-weight: 500;
+        letter-spacing: normal;
+        margin-bottom: 12px;
+    }
+
+    &__text {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    &__cta {
+        gap: 6px;
+    }
+
+    &__cta-text {
+        padding: 16px 54px;
+    }
+
+    &__cta-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    &__advantages {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__item {
+        max-width: 278px;
+        width: 100%;
+        padding: 24px 20px 20px 20px;
+        position: relative;
+
+        &::after {
+            border-radius: 24px;
+            background: linear-gradient(35.35deg, rgba(255, 255, 255, 0) 66.32%, rgba(255, 255, 255, 0.6) 102.79%), linear-gradient(210.43deg, rgba(255, 255, 255, 0) 66.44%, rgba(255, 255, 255, 0.6) 100%);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -24px;
+            width: 100px;
+            height: 100px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &--speed::before {
+            background-image: url('../images/advantages/speed.png');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/advantages/speed-2x.png');
+            }
+
+            @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+                background-image: url('../images/advantages/speed.webp');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/advantages/speed-2x.webp');
+                }
+            }
+        }
+
+        &--privacy::before {
+            background-image: url('../images/advantages/security.png');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/advantages/security-2x.png');
+            }
+
+            @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+                background-image: url('../images/advantages/security.webp');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/advantages/security-2x.webp');
+                }
+            }
+        }
+
+        &--global::before {
+            background-image: url('../images/advantages/global.png');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/advantages/global-2x.png');
+            }
+
+            @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+                background-image: url('../images/advantages/global.webp');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/advantages/global-2x.webp');
+                }
+            }
+        }
+
+        &--unlimited::before {
+            background-image: url('../images/advantages/unlimited.png');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/advantages/unlimited-2x.png');
+            }
+
+            @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+                background-image: url('../images/advantages/unlimited.webp');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/advantages/unlimited-2x.webp');
+                }
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        letter-spacing: normal;
+        color: $accent;
+    }
+}
+
+@media(max-width:992px) {
+    .hero {
+        padding: 32px 0;
+
+        &::before {
+            right: 0;
+            left: auto;
+            width: 537px;
+            height: 851px;
+            transform: translateX(0);
+            background-image: url('../images/advantages/astronaut-tab.png');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/advantages/astronaut-tab-2x.png');
+            }
+
+            @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+                background-image: url('../images/advantages/astronaut-tab.webp');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/advantages/astronaut-tab-2x.webp');
+                }
+            }
+        }
+
+        &::after {
+            left: calc(50% - 80px);
+            bottom: 110px;
+            transform: rotate(90deg);
+        }
+
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__wrap {
+            padding: 0 17px;
+        }
+
+        &__statement {
+            display: none;
+        }
+
+        &__headline {
+            margin-bottom: 64px;
+        }
+
+        &__advantages {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__item {
+            max-width: 46%;
+        }
+    }
+}
+
+@media(max-width:576px) {
+    .hero {
+        padding: 12px 0 0 0;
+
+        &::before {
+            left: 50%;
+            top: calc(50% - 106px);
+            width: 390px;
+            height: 421px;
+            transform: translate(-50%, -50%);
+            background-image: url('../images/advantages/astronaut-mob.png');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/advantages/astronaut-mob-2x.png');
+            }
+
+            @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+                background-image: url('../images/advantages/astronaut-mob.webp');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/advantages/astronaut-mob-2x.webp');
+                }
+            }
+        }
+
+        &::after {
+            left: 50%;
+            transform: translateX(-50%);
+            top: calc(50% - 106px);
+            width: 247px;
+            height: 183px;
+            filter: blur(100px);
+        }
+
+        &__wrap {
+            padding: 0;
+            text-align: center;
+        }
+
+        &__headline {
+            max-width: 100%;
+            margin-bottom: 0;
+        }
+
+        &__title {
+            font-size: 56px;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+
+        &__item {
+            max-width: 100%;
+        }
+
+        &__advantages {
+            padding-top: 262px;
+        }
+    }
+}
