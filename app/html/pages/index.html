@@ -12,6 +12,83 @@
 
 <body>
   <main>
+  <h1 class="visually-hidden">
+    ZenoVPN — Secure & Private VPN for Unlimited Internet Access
+  </h1>
+    <section class="hero">
+      <div class="container">
+          <h2 class="visually-hidden">
+            Secure and fast VPN benefits for unrestricted internet access
+          </h2>
+          <div class="hero__inner">
+            <div class="hero__wrap">
+              <div class="hero__statement">
+                <span class="hero__statement-title">
+                  Freedom of Thought
+                </span>
+                <p class="hero__statement-text">
+                  We believe in the power of free thinking. In a world of digital censorship and surveillance, Zeno VPN empowers you to think, explore, and connect without boundaries.
+                </p>
+              </div>
+              <div class="hero__headline">
+                <span class="hero__title">
+                  Think 
+                  <span class="accent">
+                    Free
+                  </span> 
+                </span>
+                <p class="hero__text">
+                  Your digital philosophy for unrestricted internet access on all your devices.
+                </p>
+                @@include('../components/cta.html', {
+                  "ctaClass": "hero__cta",
+                  "ctaText": "Get Started",
+                  "ctaTextClass": "hero__cta-text",
+                  "ctaIconClass": "hero__cta-icon",
+                  "ctaWidth": "17",
+                  "ctaHeight": "15",
+                  "extraDots": ".",
+                  "ctaIcon": "arrow-right"
+                })
+              </div>
+            </div>
+            <ul class="hero__advantages">
+              <li class="hero__item hero__item--speed blur-plate">
+                <h3 class="hero__subtitle">
+                    High Speed
+                </h3>
+                <p class="hero__description">
+                  Lightning-fast connection optimized for streaming, gaming, and downloads.
+                </p>
+              </li>
+              <li class="hero__item hero__item--privacy blur-plate">
+                <h3 class="hero__subtitle">
+                    Privacy First
+                </h3>
+                <p class="hero__description">
+                  Military-grade encryption and strict no-logs policy to protect your data.
+                </p>
+              </li>
+              <li class="hero__item hero__item--global blur-plate">
+                <h3 class="hero__subtitle">
+                    Global Access
+                </h3>
+                <p class="hero__description">
+                  Access any content worldwide, bypassing censorship and geo-restrictions.
+                </p>
+              </li>
+              <li class="hero__item hero__item--unlimited blur-plate">
+                <h3 class="hero__subtitle">
+                    Unlimited Devices
+                </h3>
+                <p class="hero__description">
+                  Protect all your devices with one subscription: phone, laptop, tablet, PC.
+                </p>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </section>
     <section class="metrics section">
         <div class="container">
           <div class="metrics__header">
@@ -673,10 +750,12 @@
     </section>
     <section class="ready">
       <div class="container">
+        <h2 class="visually-hidden">
+            Secure VPN access with 24/7 customer support and money-back guarantee
+        </h2>
         <div class="ready__inner">
           <div class="ready__img-box">
             <picture>
-              <!-- Mobile (<576px) -->
               <source media="(max-width: 575px)" type="image/webp" srcset="
                   ./images/ready/astronaut-ready-mob.webp 1x,
                   ./images/ready/astronaut-ready-mob-x2.webp 2x
