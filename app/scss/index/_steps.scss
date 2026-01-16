@@ -1,0 +1,106 @@
+.steps {
+    padding-top: 128px;
+    text-align: center;
+
+    &__title {
+        max-width: 313px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 48px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 0 24px 24px 24px;
+        max-width: 320px;
+        width: 100%;
+
+        &::after {
+            border-radius: 24px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: normal;
+        margin-bottom: 12px;
+    }
+
+    &__description {
+        font-size: 18px;
+    }
+
+    &__link {
+        text-decoration: underline;
+        border-radius: 4px;
+        outline-offset: 2px;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:focus {
+            outline: 1px solid $accent;
+        }
+
+        &:active {
+            opacity: 0.6;
+        }
+    }
+
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: -36px auto 12px;
+        order: -1;
+        width: 72px;
+        height: 72px;
+        border-radius: 24px;
+        font-size: 20px;
+        color: $dark;
+        font-weight: 700;
+        z-index: -2;
+        background-color: transparent;
+        backdrop-filter: none;
+
+        &::after {
+            border-radius: 24px;
+            background: linear-gradient(48.35deg, rgba(255, 255, 255, 0) 69.32%, rgba(255, 255, 255, 0.6) 94.79%), linear-gradient(222.43deg, rgba(255, 255, 255, 0) 61.44%, rgba(255, 255, 255, 0.6) 100%);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            border-radius: 8px;
+            width: 32px;
+            height: 32px;
+            z-index: -1;
+            background-color: $accent;
+            box-shadow: 0 0 32px $accent;
+        }
+
+        &-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52px;
+            height: 52px;
+            flex-shrink: 0;
+            background-color: transparent;
+            backdrop-filter: none;
+
+            &::after {
+                background: linear-gradient(48.35deg, rgba(255, 255, 255, 0) 69.32%, rgba(255, 255, 255, 0.6) 94.79%), linear-gradient(222.43deg, rgba(255, 255, 255, 0) 61.44%, rgba(255, 255, 255, 0.6) 100%);
+            }
+        }
+    }
+}
