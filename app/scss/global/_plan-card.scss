@@ -23,7 +23,7 @@
         top: 65px;
         left: 36%;
         transform: translateX(-50%) rotate(29deg);
-        z-index: 5;
+        z-index: 1;
         width: 146px;
         height: 32px;
         -webkit-filter: blur(2px);
@@ -273,6 +273,7 @@
             text-align: left;
             gap: 2px;
             margin-bottom: 0;
+            z-index: 5;
         }
 
         &__title {
