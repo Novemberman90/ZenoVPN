@@ -290,4 +290,29 @@ document.addEventListener('DOMContentLoaded', () => {
       initSwiper();
     }
   });
+
+    /* ================= COOKIE ================= */
+
+  const cookie = document.getElementById('cookie');
+  if (cookie) {
+    const acceptBtn = cookie.querySelector('.cookie__accept');
+    const closeBtn = cookie.querySelector('.cookie__close');
+    const COOKIE_KEY = 'cookieConsent';
+
+    if (localStorage.getItem(COOKIE_KEY) === null) {
+      setTimeout(() => cookie.classList.add('is-visible'), 4000);
+    }
+
+    acceptBtn?.addEventListener('click', () => {
+      localStorage.setItem(COOKIE_KEY, 'true');
+      cookie.classList.remove('is-visible');
+    });
+
+    closeBtn?.addEventListener('click', () => {
+      localStorage.setItem(COOKIE_KEY, 'false');
+      cookie.classList.remove('is-visible');
+    });
+  }
+
+  
 });
