@@ -19,7 +19,11 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-image: url('../images/bg/futuristic-ruins.jpg');
+        background-image: url("../images/bg/futuristic-ruins.jpg");
+
+        @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+            background-image: url("../images/bg/futuristic-ruins.avif");
+        }
     }
 
     &::after {
@@ -117,8 +121,41 @@
     }
 }
 
+@media(max-width:768px) {
+    .faq {
+        &::before {
+            background-image: url("../images/bg/futuristic-ruins-tab.jpg");
+
+            @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+                background-image: url("../images/bg/futuristic-ruins-tab.avif");
+            }
+        }
+
+        &::before,
+        &::after {
+            bottom: -285px;
+        }
+    }
+}
+
 @media(max-width: 576px) {
     .faq {
+        &::before {
+            background-image: url("../images/bg/futuristic-ruins-mob.jpg");
+
+            @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+                background-image: url("../images/bg/futuristic-ruins-mob.avif");
+            }
+        }
+
+        &::before,
+        &::after {
+            bottom: -345px;
+        }
+
+        &::after {
+            background: linear-gradient(180deg, rgba(11, 18, 23, 0) -30%, #0B1217 100%), linear-gradient(0deg, rgba(11, 18, 23, 0) -30%, #0B1217 100%), linear-gradient(90deg, rgba(11, 18, 23, 0) 100%, #0B1217 100%), linear-gradient(-90deg, rgba(11, 18, 23, 0) 100%, #0B1217 100%);
+        }
 
         &__title {
             margin-bottom: 32px;

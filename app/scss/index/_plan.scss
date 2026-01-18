@@ -18,7 +18,11 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-image: url('../images/bg/alien-canyon.jpg');
+        background-image: url("../images/bg/alien-canyon.jpg");
+
+        @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+            background-image: url("../images/bg/alien-canyon.avif");
+        }
     }
 
     &::after {
@@ -125,6 +129,14 @@
 
 @media(max-width:768px) {
     .plan {
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+
         &__advantages {
             margin-bottom: 80px;
         }

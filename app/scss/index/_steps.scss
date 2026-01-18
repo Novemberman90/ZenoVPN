@@ -7,12 +7,12 @@
     &::after {
         content: "";
         position: absolute;
-        bottom: -194px;
         left: 50%;
+        bottom: -197px;
         transform: translateX(-50%);
         max-width: 1440px;
-        width: 100%;
         height: 629px;
+        width: 100%;
         z-index: -999;
     }
 
@@ -20,11 +20,33 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-image: url('../images/bg/futuristic-valley.jpg');
+        background-image: url("../images/bg/futuristic-valley.jpg");
+
+        @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+            background-image: url("../images/bg/futuristic-valley.avif");
+        }
     }
 
     &::after {
+        max-width: 1442px;
         background: linear-gradient(180deg, rgba(11, 18, 23, 0) 0%, #0B1217 100%), linear-gradient(0deg, rgba(11, 18, 23, 0) 0%, #0B1217 100%), linear-gradient(90deg, rgba(11, 18, 23, 0) 79%, #0B1217 100%), linear-gradient(-90deg, rgba(11, 18, 23, 0) 79%, #0B1217 100%);
+    }
+
+    &__container {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 160px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 1188px;
+            width: 100%;
+            height: 1188px;
+            border: 1px solid $light-opacity-06;
+            border-radius: 50%;
+        }
     }
 
     &__title {
@@ -162,7 +184,11 @@
         padding-top: 112px;
 
         &::before {
-            background-image: url('../images/bg/futuristic-valley-tab.jpg');
+            background-image: url("../images/bg/futuristic-valley-tab.jpg");
+
+            @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+                background-image: url("../images/bg/futuristic-valley-tab.avif");
+            }
         }
 
         &::after {
@@ -193,12 +219,22 @@
         padding-top: 80px;
 
         &::before {
-            background-image: url('../images/bg/futuristic-valley-mob.jpg');
+            background-image: url("../images/bg/futuristic-valley-mob.jpg");
+
+            @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+                background-image: url("../images/bg/futuristic-valley-mob.avif");
+            }
         }
 
         &::before,
         &::after {
             bottom: -242px;
+        }
+
+        &__container {
+            &::before {
+                display: none;
+            }
         }
 
         &__title {
