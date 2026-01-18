@@ -164,6 +164,32 @@ body {
     }
 }
 
+.accent-link {
+  color: $accent;
+  position: relative;
+  padding: 4px;
+  border-radius: 6px;
+  outline-offset: 0;
+  text-decoration: underline;
+  transition: opacity 0.3s, background-color 0.3s, color 0.3s;
+
+  &:hover {
+   background-color: $light-opacity-04;
+  }
+
+  &:active {
+    background-color: $light-opacity-04;
+    color: $accent-opacity-10;
+  }
+
+  &:focus {
+    outline: 1px solid $accent;
+    border-radius: 12px;
+  }
+  &:visited {
+    color: $accent-opacity-10;
+  }
+}
 @media(max-width:768px) {
     .main::before {
         background-image: url('../images/linear-grid-tab.svg');
