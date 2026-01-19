@@ -14,6 +14,7 @@
   opacity: 0;
   pointer-events: none;
   outline-offset: 5px;
+  z-index: 999;
 
   &.blur-plate {
     background: linear-gradient(231.87deg, rgba(255, 255, 255, 0.18) -30.13%, rgba(255, 255, 255, 0.03) 57.05%, rgba(255, 255, 255, 0.12) 137.89%);
@@ -30,8 +31,8 @@
   }
 
   &:active {
-  color: $accent;
-  
+    color: $accent;
+
     &::after {
       background: linear-gradient(227.43deg, rgba(255, 215, 0, 0) 65.44%, $accent 100%),
         linear-gradient(47.67deg, rgba(255, 215, 0, 0) 67.58%, $accent 100.69%);
@@ -40,7 +41,7 @@
 
   &:focus {
     outline: 1px solid $accent;
-  
+
     &::after {
       background: linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%);
     }
@@ -58,6 +59,7 @@
     right: 24px;
   }
 }
+
 @media (max-width: 576px) {
   .go-top {
     bottom: 12px;
