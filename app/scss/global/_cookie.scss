@@ -5,7 +5,6 @@
   transform: translateX(-50%);
   max-width: 1010px;
   width: 100%;
-  padding: 8px 0;
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
@@ -13,22 +12,22 @@
 
   &.is-visible {
     opacity: 1;
-    pointer-events: auto;
+    pointer-events: all;
     transform: translateX(-50%) translateY(0);
   }
 
   &__inner {
     display: flex;
     align-items: center;
+    padding: 8px;
 
     &.blur-plate {
-      padding: 8px;
       background: linear-gradient(75.18deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.06) 100%);
 
       &::after {
         padding: 1px;
         border-radius: 20px;
-        background: linear-gradient(185.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%),linear-gradient(5.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%), 
+        background: linear-gradient(183.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(3.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%);
       }
     }
   }
@@ -37,22 +36,28 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-left: 12px;
     margin-right: auto;
     padding-right: 10px;
   }
-  &__title {
+
+  &__text--bold {
     font-weight: 700;
     padding-right: 4px;
   }
 
   &__cookie-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
+    flex-shrink: 0;
+    margin-right: 12px;
 
     &.blur-plate {
-      padding: 10px;
+      padding: 0;
       background: linear-gradient(231.87deg, rgba(255, 255, 255, 0.18) -30.13%, rgba(255, 255, 255, 0.03) 57.05%, rgba(255, 255, 255, 0.12) 137.89%);
+
       &::after {
         padding: 1px;
         background: linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%);
@@ -73,71 +78,65 @@
     color: $dark;
     background-color: $accent;
     letter-spacing: normal;
-    outline-offset: 2px;
-    cursor: pointer;
+    outline-offset: 4px;
     border-radius: 16px;
     transition: box-shadow 0.3s, outline 0.3s;
+
     &:hover {
       box-shadow: 0 0 32px $accent-opacity-60;
     }
-  
+
     &:focus {
       outline: 1px solid $accent;
     }
-    
+
     &:active {
       background-color: $accent-900;
     }
   }
 
   &__close {
+    color: $light;
     width: 44px;
     height: 44px;
     border-radius: 14px;
     position: relative;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid transparent;
-    outline-offset: 2px;
-    transition: color 0.3s, box-shadow 0.3s, border-color 0.3s;
-    
-    &.blur-plate {
+    outline-offset: 4px;
+    padding: 0;
+    background: linear-gradient(231.87deg, rgba(255, 255, 255, 0.18) -30.13%, rgba(255, 255, 255, 0.03) 57.05%, rgba(255, 255, 255, 0.12) 137.89%);
+    transition: color 0.3s, box-shadow 0.3s;
+
+    &::after {
+      border-radius: 14px;
+      padding: 1px;
+      background: linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%);
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:focus {
+      outline: 1px solid $accent;
       color: $light;
-      padding: 6px;
-      background: linear-gradient(231.87deg, rgba(255, 255, 255, 0.18) -30.13%, rgba(255, 255, 255, 0.03) 57.05%, rgba(255, 255, 255, 0.12) 137.89%);
 
       &::after {
-        border-radius: 14px;
-        padding: 1px;
         background: linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%);
-      }
-
-      &:hover {
-        color: $accent;
-      }
-  
-      &:active {
-        color: $accent;
-  
-        &::after {
-          background: linear-gradient(227.43deg, rgba(255, 215, 0, 0) 65.44%, $accent 100%),
-            linear-gradient(47.67deg, rgba(255, 215, 0, 0) 67.58%, $accent 100.69%);
-        }
-      }
-  
-      &:focus {
-        outline: 1px solid $accent;
-        color: $light;
-        &::after {
-          background: linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%);
-        }
       }
     }
 
-  }
+    &:active {
+      color: $accent;
 
+      &::after {
+        background: linear-gradient(227.43deg, rgba(255, 215, 0, 0) 65.44%, $accent 100%),
+          linear-gradient(47.67deg, rgba(255, 215, 0, 0) 67.58%, $accent 100.69%);
+      }
+    }
+  }
 }
 
 @media (max-width: 1200px) {
@@ -149,24 +148,30 @@
 @media (max-width: 992px) {
   .cookie {
     &__inner {
+      padding: 16px;
+
       &.blur-plate {
-        padding: 16px;
         backdrop-filter: blur(20px);
       }
     }
-    &__cookie-img.blur-plate {
+
+    &__cookie-img {
       backdrop-filter: blur(20px);
     }
+
     &__content {
       padding-right: 120px;
     }
-    &__title {
-      font-size: 16px;
-      margin-bottom: 4px;
-    }
+
     &__text {
       font-size: 14px;
     }
+
+    &__text--bold {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
     &__accept {
       padding: 11px 14px 11px;
     }
@@ -176,36 +181,48 @@
 @media (max-width: 576px) {
   .cookie {
     bottom: 12px;
+
     &__content {
       padding-right: 10px;
     }
+
     &__text {
       text-wrap: balance;
+
       .accent-link {
         margin-left: -4px;
       }
     }
-    
+
+    &__text--bold {
+      padding-right: 0;
+    }
+
     &__actions {
       flex-direction: column;
-    }  
+    }
+
     &__close {
       width: 100%;
     }
   }
 }
+
 @media (max-width: 365px) {
   .cookie {
-    &__inner{
+    &__inner {
       flex-direction: column;
     }
+
     &__content {
       margin: 12px 0 32px 0;
     }
+
     &__actions {
       flex-direction: row;
       width: 100%;
     }
+
     &__accept,
     &__close {
       width: 50%;
