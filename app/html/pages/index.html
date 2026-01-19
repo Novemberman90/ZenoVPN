@@ -189,7 +189,7 @@
                     <span class="metric-card__note">Peak: <span data-activeNum data-count-num="500">500</span> Mbps</span>
                   </div>
                   <div class="metric-card__progress-box metric-card__progress-box--upload">
-                    <svg width="260" height="138" viewBox="0 0 260 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="metric-card__progress-line" width="260" height="138" viewBox="0 0 260 138" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M224.751 166.693C220.983 179.136 214.801 190.715 206.558 200.768C198.315 210.822 188.173 219.154 176.71 225.288C165.247 231.422 152.689 235.238 139.751 236.519C126.813 237.799 113.75 236.519 101.307 232.751C88.8645 228.983 77.2856 222.801 67.2318 214.558C57.1781 206.316 48.8463 196.173 42.7122 184.71C36.5781 173.248 32.7619 160.689 31.4814 147.751C30.2009 134.814 31.4811 121.75 35.2491 109.308C39.0171 96.8647 45.199 85.2858 53.4418 75.2321C61.6847 65.1783 71.827 56.8465 83.2898 50.7125C94.7526 44.5784 107.311 40.7621 120.249 39.4816C133.187 38.2011 146.25 39.4814 158.693 43.2494C171.136 47.0173 182.714 53.1992 192.768 61.4421C202.822 69.6849 211.154 79.8273 217.288 91.2901C223.422 102.753 227.238 115.312 228.519 128.249C229.799 141.187 228.519 154.25 224.751 166.693L224.751 166.693Z"
                         stroke="white" stroke-opacity="0.06" stroke-width="14" stroke-linecap="round" />
@@ -238,7 +238,7 @@
                      <span class="metric-card__note">Peak: <span data-activeNum data-count-num="1000">1000</span> Mbps</span>
                    </div>
                    <div class="metric-card__progress-box metric-card__progress-box--download">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="371" height="188" viewBox="0 0 371 188" fill="none">
+                   <svg class="metric-card__progress-line" xmlns="http://www.w3.org/2000/svg" width="371" height="188" viewBox="0 0 371 188" fill="none">
                      <path stroke="#fff" stroke-linecap="round" stroke-opacity=".06" stroke-width="20"
                        d="M327.734 230.315a146.01 146.01 0 0 1-70.848 86.413 146.003 146.003 0 0 1-208.62-171.042 146 146 0 1 1 279.468 84.629h0Z" />
                      <g filter="url(#a)">
@@ -284,7 +284,7 @@
                   </div>
                   <!-- ring -->
                   <div class="metric-card__progress-box metric-card__progress-box--latency">
-                    <svg width="260" height="138" viewBox="0 0 260 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="metric-card__progress-line" width="260" height="138" viewBox="0 0 260 138" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M224.751 166.693C220.983 179.136 214.801 190.714 206.558 200.768C198.315 210.822 188.173 219.154 176.71 225.288C165.247 231.422 152.689 235.238 139.751 236.519C126.813 237.799 113.75 236.519 101.307 232.751C88.8645 228.983 77.2856 222.801 67.2318 214.558C57.1781 206.315 48.8463 196.173 42.7122 184.71C36.5781 173.247 32.7619 160.689 31.4814 147.751C30.2009 134.813 31.4811 121.75 35.2491 109.307C39.0171 96.8644 45.199 85.2856 53.4418 75.2318C61.6847 65.1781 71.827 56.8463 83.2898 50.7122C94.7526 44.5781 107.311 40.7619 120.249 39.4814C133.187 38.2009 146.25 39.4811 158.693 43.2491C171.136 47.0171 182.714 53.199 192.768 61.4418C202.822 69.6847 211.154 79.827 217.288 91.2898C223.422 102.753 227.238 115.311 228.519 128.249C229.799 141.187 228.519 154.25 224.751 166.693L224.751 166.693Z"
                         stroke="white" stroke-opacity="0.06" stroke-width="14" stroke-linecap="round" />
@@ -440,227 +440,229 @@
         </ul>
       </div>
     </section>
-    <section class="reviews section">
-      <div class="container">
-        <h2 class="reviews__title title">What Our <span class="accent">Customers Say</span></h2>
-        <div class="reviews__inner">
-          <div class="reviews__slider">
-            <span class="visually-hidden">carousel</span>
-            <div class="swiper reviews-slider">
-              <div class="swiper-wrapper">
-                <!-- Slide -->
-                <div class="swiper-slide review-card">
-                  <div class="review-card__inner blur-plate">
-                    <div class="review-card__header">
-                      <picture>
-                        <source type="image/webp" srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
-                        <source type="image/png" srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
-                        <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users" width="56" height="56"
-                          loading="lazy" />
-                      </picture>
-                      <div class="review-card__user">
-                        <p class="review-card__user-name">Robert F.</p>
-                        <p class="review-card__user-location">Mumbai, India</p>
+    <section class="reviews">
+      <div class="reviews__wrapper">
+        <div class="container">
+          <h2 class="reviews__title title">What Our <span class="accent">Customers Say</span></h2>
+          <div class="reviews__inner">
+            <div class="reviews__slider">
+              <span class="visually-hidden">carousel</span>
+              <div class="swiper reviews-slider">
+                <div class="swiper-wrapper">
+                  <!-- Slide -->
+                  <div class="swiper-slide review-card">
+                    <div class="review-card__inner blur-plate">
+                      <div class="review-card__header">
+                        <picture>
+                          <source type="image/webp" srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
+                          <source type="image/png" srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
+                          <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users" width="56" height="56"
+                            loading="lazy" />
+                        </picture>
+                        <div class="review-card__user">
+                          <p class="review-card__user-name">Robert F.</p>
+                          <p class="review-card__user-location">Mumbai, India</p>
+                        </div>
                       </div>
+                      <div class="review-card__rating">
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                      </div>
+                      <p class="review-card__text">
+                        "Great value for money. Easy setup and works perfectly on all my devices."
+                      </p>
                     </div>
-                    <div class="review-card__rating">
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                    </div>
-                    <p class="review-card__text">
-                      "Great value for money. Easy setup and works perfectly on all my devices."
-                    </p>
                   </div>
-                </div>
-                <div class="swiper-slide review-card">
-                  <div class="review-card__inner blur-plate">
-                    <div class="review-card__header">
-                      <picture>
-                        <source type="image/webp" srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
-                        <source type="image/png" srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
-                        <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users" width="56" height="56"
-                          loading="lazy" />
-                      </picture>
-                      <div class="review-card__user">
-                        <p class="review-card__user-name">Robert F.</p>
-                        <p class="review-card__user-location">Mumbai, India</p>
+                  <div class="swiper-slide review-card">
+                    <div class="review-card__inner blur-plate">
+                      <div class="review-card__header">
+                        <picture>
+                          <source type="image/webp" srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
+                          <source type="image/png" srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
+                          <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users" width="56" height="56"
+                            loading="lazy" />
+                        </picture>
+                        <div class="review-card__user">
+                          <p class="review-card__user-name">Robert F.</p>
+                          <p class="review-card__user-location">Mumbai, India</p>
+                        </div>
                       </div>
+                      <div class="review-card__rating">
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                      </div>
+                      <p class="review-card__text">
+                        "Great value for money. Easy setup and works perfectly on all my devices."
+                      </p>
                     </div>
-                    <div class="review-card__rating">
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                    </div>
-                    <p class="review-card__text">
-                      "Great value for money. Easy setup and works perfectly on all my devices."
-                    </p>
                   </div>
-                </div>
-                <div class="swiper-slide review-card">
-                  <div class="review-card__inner blur-plate">
-                    <div class="review-card__header">
-                      <picture>
-                        <source type="image/webp" srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
-                        <source type="image/png" srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
-                        <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users" width="56" height="56"
-                          loading="lazy" />
-                      </picture>
-                      <div class="review-card__user">
-                        <p class="review-card__user-name">Robert F.</p>
-                        <p class="review-card__user-location">Mumbai, India</p>
+                  <div class="swiper-slide review-card">
+                    <div class="review-card__inner blur-plate">
+                      <div class="review-card__header">
+                        <picture>
+                          <source type="image/webp" srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
+                          <source type="image/png" srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
+                          <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users" width="56" height="56"
+                            loading="lazy" />
+                        </picture>
+                        <div class="review-card__user">
+                          <p class="review-card__user-name">Robert F.</p>
+                          <p class="review-card__user-location">Mumbai, India</p>
+                        </div>
                       </div>
+                      <div class="review-card__rating">
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="./images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                      </div>
+                      <p class="review-card__text">
+                        "Great value for money. Easy setup and works perfectly on all my devices."
+                      </p>
                     </div>
-                    <div class="review-card__rating">
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                      <span class="review-card__rating-star">
-                        <svg width="20" height="20">
-                          <use href="./images/sprite.svg#rating"></use>
-                        </svg>
-                      </span>
-                    </div>
-                    <p class="review-card__text">
-                      "Great value for money. Easy setup and works perfectly on all my devices."
-                    </p>
                   </div>
                 </div>
               </div>
+              <div class="reviews__nav-panel">
+                 <button class="reviews__nav reviews__nav--next blur-plate" type="button">
+                  <span class="visually-hidden">next slide</span>
+                   <svg class="reviews__nav-icon icon" width="24" height="24">
+                     <use href="./images/sprite.svg#chevron"></use>
+                   </svg>
+                 </button>
+           
+                 <button class="reviews__nav reviews__nav--prev blur-plate" type="button">
+                  <span class="visually-hidden">previous slide</span>
+                   <svg class="reviews__nav-icon icon" width="24" height="24">
+                     <use href="./images/sprite.svg#chevron"></use>
+                   </svg>
+                 </button>
+              </div>
             </div>
-            <div class="reviews__nav-panel">
-               <button class="reviews__nav reviews__nav--next blur-plate" type="button">
-                <span class="visually-hidden">next slide</span>
-                 <svg class="reviews__nav-icon icon" width="24" height="24">
-                   <use href="./images/sprite.svg#chevron"></use>
-                 </svg>
-               </button>
-         
-               <button class="reviews__nav reviews__nav--prev blur-plate" type="button">
-                <span class="visually-hidden">previous slide</span>
-                 <svg class="reviews__nav-icon icon" width="24" height="24">
-                   <use href="./images/sprite.svg#chevron"></use>
-                 </svg>
-               </button>
-            </div>
-          </div>
-          <picture>
-            <source type="image/webp" srcset="
-                ./images/reviews/astronaut-reviews.webp 1x,
-                ./images/reviews/astronaut-reviews-x2.webp 2x
-              ">
-            <source type="image/png" srcset="
-                ./images/reviews/astronaut-reviews.png 1x,
-                ./images/reviews/astronaut-reviews-x2.png 2x
-              ">
-            <img class="reviews__img" src="./images/reviews/astronaut-reviews.png" alt="Customer Support" loading="lazy">
-          </picture>
-        </div>
-        <div class="reviews__stats">
-          <div class="reviews__stat blur-plate">
             <picture>
-              <source media="(max-width: 992px)" type="image/webp" srcset="./images/reviews/users-tab.webp 1x,./images/reviews/users-tab-x2.webp 2x" />
-              <source media="(max-width: 992px)" type="image/png" srcset="./images/reviews/users-tab.png 1x, ./images/reviews/users-tab-x2.png 2x" />
-              <source type="image/webp" srcset="./images/reviews/users.webp 1x,./images/reviews/users-x2.webp 2x" />
-              <source type="image/png" srcset="./images/reviews/users.png 1x, ./images/reviews/users-x2.png 2x" />
-              <img class="reviews__stat-img" src="./images/reviews/users.png" alt="Active Users" width="64" height="64" loading="lazy" />
+              <source type="image/webp" srcset="
+                  ./images/reviews/astronaut-reviews.webp 1x,
+                  ./images/reviews/astronaut-reviews-x2.webp 2x
+                ">
+              <source type="image/png" srcset="
+                  ./images/reviews/astronaut-reviews.png 1x,
+                  ./images/reviews/astronaut-reviews-x2.png 2x
+                ">
+              <img class="reviews__img" src="./images/reviews/astronaut-reviews.png" alt="Customer Support" loading="lazy">
             </picture>
-            <div class="reviews__stat-content">
-              <span class="reviews__stat-num">15K+</span>
-              <span class="reviews__stat-name">Active Users</span>
-            </div>
           </div>
-          <div class="reviews__stat blur-plate">
-            <picture>
-              <source media="(max-width: 992px)" type="image/webp"
-                srcset="./images/reviews/rev-guarantee-tab.webp 1x, ./images/reviews/rev-guarantee-tab-x2.webp 2x" />
-              <source media="(max-width: 992px)" type="image/png"
-                srcset="./images/reviews/rev-guarantee-tab.png 1x, ./images/reviews/rev-guarantee-tab-x2.png 2x" />
-              <source type="image/webp"
-                srcset="./images/reviews/rev-guarantee.webp 1x, ./images/reviews/rev-guarantee-x2.webp 2x" />
-              <source type="image/png" srcset="./images/reviews/rev-guarantee.png 1x, ./images/reviews/rev-guarantee-x2.png 2x" />
-              <img class="reviews__stat-img" src="./images/reviews/rev-guarantee.png" alt="Active Users" width="64" height="64"
-                loading="lazy" />
-            </picture>
-            <div class="reviews__stat-content">
-              <span class="reviews__stat-num">99.9%</span>
-              <span class="reviews__stat-name">Uptime Guarantee</span>
+          <div class="reviews__stats">
+            <div class="reviews__stat blur-plate">
+              <picture>
+                <source media="(max-width: 992px)" type="image/webp" srcset="./images/reviews/users-tab.webp 1x,./images/reviews/users-tab-x2.webp 2x" />
+                <source media="(max-width: 992px)" type="image/png" srcset="./images/reviews/users-tab.png 1x, ./images/reviews/users-tab-x2.png 2x" />
+                <source type="image/webp" srcset="./images/reviews/users.webp 1x,./images/reviews/users-x2.webp 2x" />
+                <source type="image/png" srcset="./images/reviews/users.png 1x, ./images/reviews/users-x2.png 2x" />
+                <img class="reviews__stat-img" src="./images/reviews/users.png" alt="Active Users" width="64" height="64" loading="lazy" />
+              </picture>
+              <div class="reviews__stat-content">
+                <span class="reviews__stat-num">15K+</span>
+                <span class="reviews__stat-name">Active Users</span>
+              </div>
             </div>
-          </div>
-          <div class="reviews__stat blur-plate">
-            <picture>
-              <source media="(max-width: 992px)" type="image/webp"
-                srcset="./images/reviews/support-tab.webp 1x, ./images/reviews/support-tab-x2.webp 2x" />
-              <source media="(max-width: 992px)" type="image/png"
-                srcset="./images/reviews/support-tab.png 1x, ./images/reviews/support-tab-x2.png 2x" />
-              <source type="image/webp" srcset="./images/reviews/support.webp 1x, ./images/reviews/support-x2.webp 2x" />
-              <source type="image/png" srcset="./images/reviews/support.png 1x, ./images/reviews/support-x2.png 2x" />
-              <img class="reviews__stat-img" src="./images/reviews/support.png" alt="Active Users" width="64" height="64" loading="lazy" />
-            </picture>
-            <div class="reviews__stat-content">
-              <span class="reviews__stat-num">24/7</span>
-              <span class="reviews__stat-name">Customer Support</span>
+            <div class="reviews__stat blur-plate">
+              <picture>
+                <source media="(max-width: 992px)" type="image/webp"
+                  srcset="./images/reviews/rev-guarantee-tab.webp 1x, ./images/reviews/rev-guarantee-tab-x2.webp 2x" />
+                <source media="(max-width: 992px)" type="image/png"
+                  srcset="./images/reviews/rev-guarantee-tab.png 1x, ./images/reviews/rev-guarantee-tab-x2.png 2x" />
+                <source type="image/webp"
+                  srcset="./images/reviews/rev-guarantee.webp 1x, ./images/reviews/rev-guarantee-x2.webp 2x" />
+                <source type="image/png" srcset="./images/reviews/rev-guarantee.png 1x, ./images/reviews/rev-guarantee-x2.png 2x" />
+                <img class="reviews__stat-img" src="./images/reviews/rev-guarantee.png" alt="Active Users" width="64" height="64"
+                  loading="lazy" />
+              </picture>
+              <div class="reviews__stat-content">
+                <span class="reviews__stat-num">99.9%</span>
+                <span class="reviews__stat-name">Uptime Guarantee</span>
+              </div>
+            </div>
+            <div class="reviews__stat blur-plate">
+              <picture>
+                <source media="(max-width: 992px)" type="image/webp"
+                  srcset="./images/reviews/support-tab.webp 1x, ./images/reviews/support-tab-x2.webp 2x" />
+                <source media="(max-width: 992px)" type="image/png"
+                  srcset="./images/reviews/support-tab.png 1x, ./images/reviews/support-tab-x2.png 2x" />
+                <source type="image/webp" srcset="./images/reviews/support.webp 1x, ./images/reviews/support-x2.webp 2x" />
+                <source type="image/png" srcset="./images/reviews/support.png 1x, ./images/reviews/support-x2.png 2x" />
+                <img class="reviews__stat-img" src="./images/reviews/support.png" alt="Active Users" width="64" height="64" loading="lazy" />
+              </picture>
+              <div class="reviews__stat-content">
+                <span class="reviews__stat-num">24/7</span>
+                <span class="reviews__stat-name">Customer Support</span>
+              </div>
             </div>
           </div>
         </div>

@@ -1,32 +1,36 @@
 .reviews {
-  position: relative;
-  overflow: hidden;
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 759px;
-    height: 294px;
-    background: $accent;
-    filter: blur(222px);
-    right: -174px;
-    bottom: -18px;
-    z-index: -5;
-  }
-
-  &::after {
-    position: absolute;
-    content: '';
-    background: linear-gradient(180deg, rgba(11, 18, 23, 0) 0%, $dark 100%);
+  padding-bottom: 78px;
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 1440px;
     width: 100%;
-    height: 362px;
-    left: 0;
-    bottom: -2px;
-    z-index: -2;
+    margin: 0 auto;
+    padding-bottom: 64px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 759px;
+      height: 294px;
+      background: $accent;
+      filter: blur(222px);
+      right: -174px;
+      bottom: -18px;
+      z-index: -1;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      background: linear-gradient(180deg, rgba(11, 18, 23, 0) 0%, $dark 100%);
+      width: 100%;
+      height: 362px;
+      left: 0;
+      bottom: -2px;
+      z-index: -1;
+    }
   }
+
 
   &__title {
     margin-bottom: 48px;
@@ -47,7 +51,7 @@
     position: absolute;
     top: 0;
     right: 7px;
-    z-index: -3;
+    z-index: -1;
   }
 
   &__nav {
@@ -280,8 +284,13 @@
 
 @media (max-width: 1024px) {
   .reviews {
-    &::before {
-      display: none;
+    padding-bottom: 62px;
+    &__wrapper {
+      padding: 0;
+      &::before,
+      &::after {
+        display: none;
+      }
     }
 
     &__inner {
@@ -458,6 +467,7 @@
 
 @media (max-width: 576px) {
   .reviews {
+    padding-bottom: 50px;
     &__stats {
       gap: 16px;
     }
