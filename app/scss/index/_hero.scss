@@ -348,3 +348,53 @@
         }
     }
 }
+
+@media(max-width: 1000px) and (orientation: landscape) {
+    .hero {
+        &::before {
+            top: -31px;
+            right: 16px;
+            width: 400px;
+            height: 521px;
+            background-image: url('../images/advantages/astronaut-mob.png');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/advantages/astronaut-mob-2x.png');
+            }
+
+            @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+                background-image: url('../images/advantages/astronaut-mob.webp');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/advantages/astronaut-mob-2x.webp');
+                }
+            }
+        }
+
+        &__title {
+            font-size: 60px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+    }
+}
+
+@media(max-width: 576px) and (orientation: landscape) {
+    .hero {
+        &::before {
+            height: 421px;
+            width: 390px;
+            top: 445px;
+        }
+
+        &__advantages {
+            padding-top: 233px;
+        }
+    }
+}
