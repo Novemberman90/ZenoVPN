@@ -1,0 +1,246 @@
+.ligal {
+  padding-bottom: 120px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    max-width: 1440px;
+    width: 100%;
+    height: 629px;
+    z-index: -999;
+  }
+
+  &::before {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/bg/futuristic-valley.jpg");
+
+    @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+      background-image: url("../images/bg/futuristic-valley.avif");
+    }
+  }
+
+  &::after {
+    max-width: 1442px;
+    background: linear-gradient(180deg, rgba(11, 18, 23, 0) 0%, #0B1217 100%), linear-gradient(0deg, rgba(11, 18, 23, 0) 0%, #0B1217 100%), linear-gradient(90deg, rgba(11, 18, 23, 0) 79%, #0B1217 100%), linear-gradient(-90deg, rgba(11, 18, 23, 0) 79%, #0B1217 100%);
+  }
+
+  &__inner {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  &__tab-nav {
+    width: 100%;
+    flex: 0 0 265px;
+    position: relative;
+    padding: 24px;
+
+    backdrop-filter: blur(16px);
+    background: linear-gradient(75.18deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.06) 100%);
+    border: 1px solid transparent;
+    border-radius: 24px;
+    overflow: hidden;
+    z-index: 0; 
+
+    &::before {
+      content: '';
+      position: absolute;
+      border-radius: 24px;
+      z-index: -1;
+      padding: 1px;
+      inset: 0;
+      background:
+        linear-gradient(47.67deg, rgba(255, 255, 255, 0) 67.58%, rgba(255, 255, 255, 0.6) 100.69%),
+        linear-gradient(227.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%);
+
+      mask:
+        linear-gradient(#fff, #fff) content-box,
+        linear-gradient(#fff, #fff);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+  }
+
+  &__tab-nav-title {
+    font-size: 25px;
+    margin-bottom: 32px;
+  }
+
+  &__tabs-content {
+    max-width: 785px;
+    width: 100%;
+  }
+}
+
+.tab-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+
+  &__btn {
+    background-color: transparent;
+    display: block;
+    padding: 2px 0;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    font-weight: 700;
+    transition: all .3s;
+
+    &:hover {
+      color: $accent;
+
+      &::before {
+        left: -25px;
+      }
+
+      &::after {
+        right: -25px;
+      }
+    }
+
+    &:active {
+      color: $accent;
+
+      span {
+        border-bottom: 1px solid $accent;
+        width: 100%;
+      }
+    }
+
+    &:focus {
+      filter: drop-shadow($accent 3px 3px 10px);
+    }
+
+
+    &--active {
+      color: $accent;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 4px;
+        background-color: $accent;
+        top: 50%;
+        transform: translateY(-50%)
+      }
+
+      &::before {
+        left: -25px;
+      }
+
+      &::after {
+        right: -25px;
+      }
+    }
+  }
+}
+
+.terms {
+  &__section:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__main-title {
+    font-size: 56px;
+    margin-bottom: 32px;
+    font-weight: 500;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+
+  &__lead {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    margin-bottom: 22px;
+  }
+
+  &__text {
+    &--down {
+      margin-top: 16px;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+
+    &--mb0 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    padding-left: 38px;
+    position: relative;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $accent;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .ligal {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &::before {
+      top: -72px;
+      background-image: url("../images/bg/futuristic-valley-tab.jpg");
+
+      @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+        background-image: url("../images/bg/futuristic-valley-tab.avif");
+      }
+    }
+
+    &__inner {
+      gap: 32px;
+    }
+  }
+
+  .accent-link {
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 576px) {
+
+  .terms {
+    &__main-title {
+      font-size: 32px;
+    }
+  }
+}

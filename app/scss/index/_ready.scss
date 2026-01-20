@@ -6,7 +6,8 @@
 
   &__inner {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 32px;
     gap: 96px;
 
     &::before {
@@ -88,23 +89,13 @@
   .ready {
     &__inner {
       padding: 0;
-      gap: 0px;
-      justify-content: space-between;
-    }
-  }
-}
-
-@media(max-width: 928px) {
-  .ready {
-    &__inner {
-      padding: 0;
       justify-content: flex-end;
       gap: 0;
     }
 
     &__img-box {
       position: absolute;
-      left: -18%;
+      left: -18%; 
       bottom: 0;
     }
   }

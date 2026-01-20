@@ -1,0 +1,56 @@
+.breadcrumbs {
+    padding: 12px 0 32px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        padding-right: 32px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            background-image: url('../images/arrow-right-legal.svg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 16px;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:last-child {
+            padding-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        border-bottom: 1px solid transparent;
+        outline-offset: 6px;
+        transition: color 0.3s, border-bottom-color 0.3s, outline 0.3s;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:focus {
+            outline: 1px solid $accent;
+            border-radius: 3px;
+        }
+
+        &:active {
+            color: $accent;
+            border-bottom-color: $accent;
+        }
+    }
+}
