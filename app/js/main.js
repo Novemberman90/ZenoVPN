@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-   /* ================= SCROLL NAV ================= */
+  /* ================= SCROLL NAV ================= */
 
   const navLinks = document.querySelectorAll('a[href^="#"], [data-scroll]');
 
@@ -54,13 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // вернуть когда появится шапка, если будет нобходимо
-     // if (goTop && header) {
-     //   if (scrollPosition > header.offsetHeight || scrollPosition >= SCROLL_FIXED_THRESHOLD) {
-     //     goTop.classList.add('go-top--active');
-     //   } else {
-     //     goTop.classList.remove('go-top--active');
-     //   }
-     // }
+      // if (goTop && header) {
+      //   if (scrollPosition > header.offsetHeight || scrollPosition >= SCROLL_FIXED_THRESHOLD) {
+      //     goTop.classList.add('go-top--active');
+      //   } else {
+      //     goTop.classList.remove('go-top--active');
+      //   }
+      // }
       if (goTop) {
         if (scrollPosition >= SCROLL_FIXED_THRESHOLD) {
           goTop.classList.add('go-top--active');
@@ -107,63 +107,36 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* ================= FAQ ACCORDION ================= */
-  const initAccordion = () => {
-    const accordions = document.querySelectorAll('[data-accordion]');
-    if (!accordions.length) return;
+  const accordions = document.querySelectorAll('[data-accordion]');
+  if (!accordions.length) return;
 
-    const close = (acc) => {
-      acc.classList.remove('is-open');
+  accordions.forEach(item => {
+    const button = item.querySelector('.faq__button');
+    const answer = item.querySelector('.faq__answer');
+    const icon = item.querySelector('.faq__icon');
 
-      const answer = acc.querySelector('.faq__answer');
-      if (answer) answer.style.maxHeight = null;
+    if (!button || !answer || !icon) return;
 
-      const icon = acc.querySelector('.faq__icon');
-      if (icon) icon.classList.remove('faq__icon--open');
-    };
+    button.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
 
-    const open = (acc) => {
-      acc.classList.add('is-open');
+      accordions.forEach(acc => {
+        acc.classList.remove('is-open');
 
-      const answer = acc.querySelector('.faq__answer');
-      if (answer) answer.style.maxHeight = `${answer.scrollHeight}px`;
+        const accAnswer = acc.querySelector('.faq__answer');
+        const accIcon = acc.querySelector('.faq__icon');
 
-      const icon = acc.querySelector('.faq__icon');
-      if (icon) icon.classList.add('faq__icon--open');
-    };
+        if (accAnswer) accAnswer.style.maxHeight = null;
+        if (accIcon) accIcon.classList.remove('faq__icon--open');
+      });
 
-    accordions.forEach((item) => {
-      const btn = item.querySelector('.faq__button');
-      const answer = item.querySelector('.faq__answer');
-      const icon = item.querySelector('.faq__icon');
-
-      if (!btn || !answer) return;
-
-      if (!item.classList.contains('is-open')) {
-        answer.style.maxHeight = null;
-        if (icon) icon.classList.remove('faq__icon--open');
-      } else {
-        answer.style.maxHeight = `${answer.scrollHeight}px`;
-        if (icon) icon.classList.add('faq__icon--open');
+      if (!isOpen) {
+        item.classList.add('is-open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        icon.classList.add('faq__icon--open');
       }
-
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        const isOpening = !item.classList.contains('is-open');
-
-        accordions.forEach(close);
-        if (isOpening) open(item);
-      });
     });
-
-    window.addEventListener('resize', () => {
-      accordions.forEach((acc) => {
-        if (!acc.classList.contains('is-open')) return;
-        const answer = acc.querySelector('.faq__answer');
-        if (answer) answer.style.maxHeight = `${answer.scrollHeight}px`;
-      });
-    });
-  };
+  });
 
   /* ================= METRICS: OBSERVER ================= */
   const initMetricsObserver = () => {
@@ -337,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
           window.location.replace('/ar/index.html');
         }
       })
-      .catch(() => {});
+      .catch(() => { });
   })();
 
   /* ================= NETWORK: SHOW ALL COUNTRIES ================= */
@@ -367,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-    /* ================= COOKIE ================= */
+  /* ================= COOKIE ================= */
 
   const cookie = document.getElementById('cookie');
   if (cookie) {
@@ -390,5 +363,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  
+
 });

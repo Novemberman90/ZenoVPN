@@ -82,6 +82,7 @@
 
             .faq__subtitle {
                 margin-bottom: 12px;
+                color: $accent;
             }
 
             .faq__icon {
@@ -92,7 +93,6 @@
 
     &__inner {
         overflow: hidden;
-        transition: max-height 0.3s, padding 0.3s;
     }
 
     &__button {
