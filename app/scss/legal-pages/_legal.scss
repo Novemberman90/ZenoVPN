@@ -15,7 +15,7 @@
     &::after {
       position: absolute;
       content: '';
-      background-image: url('../images/ligal/chevron-breadcrumbs.svg');
+      background-image: url('../images/legal/chevron-breadcrumbs.svg');
       width: 16px;
       height: 16px;
       right: 8px;
@@ -61,19 +61,25 @@
   }
 }
 
-.ligal {
-  padding-bottom: 120px;
+.legal {
+  padding-bottom: 112px;
 
   &::before {
-    position: absolute;
     content: "";
-    background-position: center center;
-    background-repeat: no-repeat;
+    position: absolute;
+    background-position: center;
     background-size: cover;
-    background-image: url('../images/ligal/ligal-bg.png');
-    inset: 0;
+    background-repeat: no-repeat;
+    background-image: url("../images/bg/futuristic-valley.jpg");
+    
+    @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+      background-image: url("../images/bg/futuristic-valley.avif");
+    }
+    max-width: 1440px;
     width: 100%;
     height: 629px;
+    width: 100%;
+    inset: 0;
     z-index: -1;
   }
   &::after {
@@ -81,14 +87,11 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background:
-      linear-gradient(to top, #0B1217 0%, rgba(11, 18, 23, 0) 40%),
-      linear-gradient(to bottom, #0B1217 0%, rgba(11, 18, 23, 0) 40%),
-      linear-gradient(to left, #0B1217 0%, rgba(11, 18, 23, 0) 40%),
-      linear-gradient(to right, #0B1217 0%, rgba(11, 18, 23, 0) 40%);
-      height: 629px;
-      width: 100%;
-        z-index: -1;
+    background: linear-gradient(180deg, rgba(11, 18, 23, 0) 0%, #0B1217 100%), linear-gradient(0deg, rgba(11, 18, 23, 0) 0%, #0B1217 100%), linear-gradient(90deg, rgba(11, 18, 23, 0) 79%, #0B1217 100%), linear-gradient(-90deg, rgba(11, 18, 23, 0) 79%, #0B1217 100%);
+    max-width: 1442px;
+    height: 629px;
+    width: 100%;
+    z-index: -1;
   }
 
 
@@ -96,12 +99,13 @@
     display: flex;
     gap: 40px;
     align-items: flex-start;
-    flex-wrap: wrap;
+  //  flex-wrap: wrap;
   }
 
   &__tab-nav {
+    max-width: 263px;
     width: 100%;
-    flex: 0 0 265px;
+    //flex: 0 0 263px;
     position: relative;
     padding: 24px;
 
@@ -133,7 +137,19 @@
 
   &__tab-nav-title {
     font-size: 25px;
-    margin-bottom: 32px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    margin-bottom: 16px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $light-opacity-06;
+      left: 0;
+      bottom: 0;
+    }
   }
 
   &__tabs-content {
@@ -172,7 +188,6 @@
 
     &:active {
       color: $accent;
-
       span {
         border-bottom: 1px solid $accent;
         width: 100%;
@@ -186,7 +201,7 @@
 
     &--active {
       color: $accent;
-
+      font-weight: 700;
       &::before,
       &::after {
         position: absolute;
@@ -209,35 +224,52 @@
   }
 }
 
-.terms {
+.terms,
+.privacy,
+.refund,
+.aboutUs {
   &__section {
-    padding: 16px 0;
+    padding-bottom: 32px;
   }
 
   &__main-title {
-    font-size: 72px;
-    margin-bottom: 16px;
+    font-size: 56px;
+    margin-bottom: 32px;
+    font-weight: 500;
+    letter-spacing: normal;
   }
 
   &__title {
-    font-size: 36px;
-    margin-bottom: 22px;
+    font-size: 40px;
+    margin-bottom: 16px;
+    letter-spacing: normal;
+    font-weight: 500;
   }
 
   &__subtitle {
     font-size: 24px;
-    margin-bottom: 22px;
+    margin-bottom: 16px;
+    font-weight: 500;
 
     &--pt {
       padding-top: 32px;
     }
   }
 
+  &__descr {
+    font-size: 18px;
+    &--mb {
+      margin-bottom: 16px;
+    }
+  }
+
   &__text {
-    margin-bottom: 22px;
+    margin-bottom: 16px;
 
     &--down {
       margin-top: 16px;
+      margin-bottom: 0;
+      font-size: 18px;
     }
 
     &--bold {
@@ -256,8 +288,13 @@
   &__item {
     padding-left: 38px;
     position: relative;
-    margin-bottom: 10px;
-
+    margin-bottom: 12px;
+    &:first-child {
+      padding-top: 6px;
+      &::before {
+        top: 11px;
+      }
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -269,8 +306,7 @@
       height: 10px;
       border-radius: 50%;
       left: 15px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 5px;
       background-color: $accent;
     }
   }
@@ -278,78 +314,78 @@
 
 
 
-@media (max-width: 1120px) {
-  .ligal {
+@media (max-width: 768px) {
+  .legal {
+    &::before {
+        background-image: url("../images/bg/futuristic-valley-tab.jpg");
+    
+        @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+          background-image: url("../images/bg/futuristic-valley-tab.avif");
+        }
+      }
+    
     &__inner {
       gap: 32px;
+      flex-wrap: wrap;
     }
-
     &__tab-nav-title {
-      font-size: 28px;
+      font-size: 24px;
     }
 
     &__tab-nav {
-      flex: 1 1 auto;
+      max-width: 100%;
     }
 
     &__tabs-content {
       max-width: 100%;
     }
   }
-}
 
-@media (max-width: 767px) {
-  .ligal {
-    &__inner {
-      gap: 24px;
-    }
-  }
-
-  .terms {
-    &__main-title {
-      font-size: 48px;
-      margin-bottom: 12px;
-    }
-
-    &__section {
-      padding: 12px 0;
-    }
-
-    &__title {
-      font-size: 26px;
-      margin-bottom: 16px;
-    }
+  .terms,
+  .privacy,
+  .refund,
+  .aboutUs {
 
     &__subtitle {
       font-size: 24px;
-
-      &--pt {
-        padding-top: 24px;
-      }
     }
-
-    &__text {
-      font-size: 16px;
-    }
-
-    &__item {
-      &::before {
-        top: 0;
-        transform: translateY(0);
-        background-color: $accent;
-      }
-    }
-  }
-
-  .accent-link {
-    font-size: 16px;
   }
 }
 
 @media(max-width: 576px) {
-
-  .terms {
+  .top{
+    padding: 12px 0 24px;
+  }
+  .breadcrumbs {
+    &__item{
+      padding-right: 22px;
+      &::after {
+        width: 14px;
+        height: 14px;
+        right: 4px;
+      }
+    }
+    &__link {
+      font-size: 14px;
+    }
+  }
+  .legal {
+    &::before {
+      background-image: url("../images/bg/futuristic-valley-mob.jpg");
+  
+      @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+        background-image: url("../images/bg/futuristic-valley-mob.avif");
+      }
+    }
+  }
+  .terms,
+  .privacy,
+  .refund,
+  .aboutUs {
     &__main-title {
+      font-size: 40px;
+    }
+    &__title {
       font-size: 32px;
     }
   }
