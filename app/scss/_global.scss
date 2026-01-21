@@ -163,49 +163,50 @@ body {
         z-index: -1;
     }
 }
+
 .accent-link {
-  color: $accent;
-  display: inline-block;
-  position: relative;
-  text-decoration: underline;
-  border-radius: 12px;
-  outline-offset: 3px;
-  transition: opacity 0.3s, background-color 0.3s, color 0.3s, outline 0.3s;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: calc(100% + 6px);
-    height: calc(100% + 4px);
-    border-radius: 6px;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-    transition: background-color 0.3s;
-  }
-
-  &:hover {
-    &::before {
-      background-color: $light-opacity-04;
-    }
-  }
-
-  &:focus {
-    outline: 1px solid $accent;
-  }
-
-  &:active {
-    color: $accent-800;
+    color: $accent;
+    display: inline-block;
+    position: relative;
+    text-decoration: underline;
+    border-radius: 12px;
+    outline-offset: 3px;
+    transition: opacity 0.3s, background-color 0.3s, color 0.3s, outline 0.3s;
 
     &::before {
-      background-color: $light-opacity-04;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(100% + 6px);
+        height: calc(100% + 4px);
+        border-radius: 6px;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        transition: background-color 0.3s;
     }
-  }
 
-  &:visited {
-    color: $accent-800;
-  }
+    &:hover {
+        &::before {
+            background-color: $light-opacity-04;
+        }
+    }
+
+    &:focus {
+        outline: 1px solid $accent;
+    }
+
+    &:active {
+        color: $accent-800;
+
+        &::before {
+            background-color: $light-opacity-04;
+        }
+    }
+
+    &:visited {
+        color: $accent-800;
+    }
 }
 
 @media(max-width:768px) {
