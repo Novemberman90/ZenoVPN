@@ -30,29 +30,30 @@
 
   &__link {
     position: relative;
-    transition: all .3s;
-    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    outline-offset: 3px;
+    transition: color 0.3s, border-color 0.3s, outline 0.3s;
 
     &:hover {
       color: $accent;
+
+      &::before {
+        left: -25px;
+      }
+
+      &::after {
+        right: -25px;
+      }
     }
 
     &:active {
       color: $accent;
-
-      &::before {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 1px;
-        background-color: $accent;
-        left: 0;
-        bottom: 0;
-      }
+      border-color: $accent;
     }
 
     &:focus {
-      filter: drop-shadow($accent 3px 3px 10px);
+      border-radius: 3px;
+      outline: 1px solid $accent;
     }
   }
 }
