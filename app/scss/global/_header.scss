@@ -379,6 +379,10 @@
 @media(max-width:576px) {
     .header {
         padding: 16px 0;
+
+        &__cta-text {
+            padding: 11px 12px;
+        }
     }
 
     .switcher-lang {
