@@ -390,4 +390,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ================= LOGO: SCROLL TO TOP ================= */
+  const HERO_ID = 'hero';
+  const HEADER_SELECTOR = '.header';
+  const header = HEADER_SELECTOR ? document.querySelector(HEADER_SELECTOR) : null;
+
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest(`a[href="#${HERO_ID}"]`);
+    if (!link) return;
+
+    const hero = document.getElementById(HERO_ID);
+    if (!hero) return;
+
+    e.preventDefault();
+
+    const headerOffset = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
+
+    const heroTop = hero.getBoundingClientRect().top + window.pageYOffset;
+    const targetY = Math.max(0, heroTop - headerOffset);
+
+    const supportsSmooth =
+      'scrollBehavior' in document.documentElement.style;
+
+    if (supportsSmooth) {
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+      return;
+    }
+
+    const startY = window.pageYOffset;
+    const distance = targetY - startY;
+    const duration = 500; // ms
+    const startTime = performance.now();
+
+    const easeInOutCubic = (t) =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    const step = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeInOutCubic(progress);
+
+      window.scrollTo(0, startY + distance * eased);
+
+      if (progress < 1) requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+  });
 });
