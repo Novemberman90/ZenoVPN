@@ -21,25 +21,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ================= MOBILE MENU ================= */
-  const menuBtnRef = document.querySelector('[data-menu-button]');
-  const mobileMenuRef = document.querySelector('[data-menu]');
+  const menuBtn = document.querySelector('[data-menu-button]');
+  const mobileMenu = document.querySelector('[data-menu]');
 
-  const closeMenu = () => {
-    if (!menuBtnRef || !mobileMenuRef) return;
+  const openMenu = () => {
+    if (!menuBtn || !mobileMenu) return;
+    const isOpen = mobileMenu.classList.toggle('is-open');
+    menuBtn.classList.toggle('is-open', isOpen);
+    mobileMenu.classList.toggle('blur-plate');
+    menuBtn.setAttribute('aria-expanded', isOpen)
+  }
 
-    mobileMenuRef.classList.remove('is-open');
-    menuBtnRef.classList.remove('is-open');
-    menuBtnRef.setAttribute('aria-expanded', 'false');
+    const closeMenu = () => {
+      if (!menuBtn || !mobileMenu) return;
+    mobileMenu.classList.remove('is-open');
+    menuBtn.classList.remove('is-open');
+    mobileMenu.classList.remove('blur-plate');
+    menuBtn.setAttribute('aria-expanded', 'false');
   };
 
-  if (menuBtnRef && mobileMenuRef) {
-    menuBtnRef.addEventListener('click', () => {
-      const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true';
-      menuBtnRef.classList.toggle('is-open');
-      menuBtnRef.setAttribute('aria-expanded', String(!expanded));
-      mobileMenuRef.classList.toggle('is-open');
-    });
+  if(menuBtn && mobileMenu) {
+
+    menuBtn.addEventListener('click', openMenu);
   }
+
 
   /* ================= SCROLL NAV ================= */
   const navLinks = document.querySelectorAll('a[href^="#"], [data-scroll]');
@@ -68,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const top =
         target.getBoundingClientRect().top +
         window.scrollY -
-        (headerHeight + 80);
+        (headerHeight + 100);
 
       window.scrollTo({ top, behavior: 'smooth' });
       closeMenu();
@@ -76,36 +81,35 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ================= HEADER STATE (FIXED + ACTIVE) ================= */
-  const headerById = document.getElementById('header');
-  const headerByData = document.querySelector('[data-header]');
-  const headerEl = headerByData || headerById;
-
+  
+  const header = document.querySelector('[data-header]');
   const goTop = document.querySelector('.go-top');
+  const SCROLL_FIXED_THRESHOLD = 50;
 
-  const SCROLL_FIXED_THRESHOLD = 50;  // is-fixed
-  const SCROLL_ACTIVE_THRESHOLD = 50; // active
+  if (header || goTop) {
+    const headerScroll = () => {
+      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-  const onHeaderScroll = () => {
-    const y = window.scrollY || document.documentElement.scrollTop;
+      if (header) {
+        if (scrollPosition >= SCROLL_FIXED_THRESHOLD) {
+          header.classList.add('active');
+        } else {
+          header.classList.remove('active');
+        }
+      }
 
-    if (headerEl) {
-      // fixed
-      if (y >= SCROLL_FIXED_THRESHOLD) headerEl.classList.add('is-fixed');
-      else headerEl.classList.remove('is-fixed');
+      if (goTop) {
+        if (scrollPosition >= SCROLL_FIXED_THRESHOLD) {
+          goTop.classList.add('go-top--active');
+        } else {
+          goTop.classList.remove('go-top--active');
+        }
+      }
+    };
 
-      // active (your first code)
-      if (y >= SCROLL_ACTIVE_THRESHOLD) headerEl.classList.add('active');
-      else headerEl.classList.remove('active');
-    }
-
-    if (goTop) {
-      if (y >= SCROLL_FIXED_THRESHOLD) goTop.classList.add('go-top--active');
-      else goTop.classList.remove('go-top--active');
-    }
-  };
-
-  window.addEventListener('scroll', onHeaderScroll);
-  onHeaderScroll();
+    window.addEventListener('scroll', headerScroll);
+    headerScroll();
+  }
 
   /* ================= HELPERS ================= */
   const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
@@ -390,51 +394,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ================= LOGO: SCROLL TO TOP ================= */
-  const HERO_ID = 'hero';
-  const HEADER_SELECTOR = '.header';
-  const header = HEADER_SELECTOR ? document.querySelector(HEADER_SELECTOR) : null;
 
-  document.addEventListener('click', (e) => {
-    const link = e.target.closest(`a[href="#${HERO_ID}"]`);
-    if (!link) return;
-
-    const hero = document.getElementById(HERO_ID);
-    if (!hero) return;
-
-    e.preventDefault();
-
-    const headerOffset = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
-
-    const heroTop = hero.getBoundingClientRect().top + window.pageYOffset;
-    const targetY = Math.max(0, heroTop - headerOffset);
-
-    const supportsSmooth =
-      'scrollBehavior' in document.documentElement.style;
-
-    if (supportsSmooth) {
-      window.scrollTo({ top: targetY, behavior: 'smooth' });
-      return;
-    }
-
-    const startY = window.pageYOffset;
-    const distance = targetY - startY;
-    const duration = 500; // ms
-    const startTime = performance.now();
-
-    const easeInOutCubic = (t) =>
-      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-
-    const step = (now) => {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = easeInOutCubic(progress);
-
-      window.scrollTo(0, startY + distance * eased);
-
-      if (progress < 1) requestAnimationFrame(step);
-    };
-
-    requestAnimationFrame(step);
-  });
 });
