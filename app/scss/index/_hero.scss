@@ -255,10 +255,6 @@
             flex-direction: column;
         }
 
-        &__wrap {
-            padding: 0 17px;
-        }
-
         &__statement {
             display: none;
         }
@@ -274,7 +270,7 @@
         }
 
         &__item {
-            max-width: 46%;
+            max-width: calc((100% - 24px) / 2);
         }
     }
 }

@@ -34,7 +34,7 @@
 @media(max-width:768px) {
     .apps {
         &__item {
-            max-width: 46%;
+            max-width: calc((100% - 24px) / 2);
         }
     }
 }

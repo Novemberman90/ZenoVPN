@@ -10,8 +10,8 @@ body {
 }
 
 .container {
-    max-width: 1218px;
-    padding: 0 15px;
+    max-width: 1252px;
+    padding: 0 32px;
     margin: 0 auto;
 }
 
@@ -229,6 +229,11 @@ body {
         &::before {
             background-image: url('../images/linear-grid-mob.svg');
         }
+    }
+
+    .container {
+        padding: 0 16px;
+        max-width: 1220px;
     }
 
     .section {

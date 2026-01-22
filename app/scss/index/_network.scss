@@ -22,7 +22,6 @@
 
   &__inner {
     padding: 0 54px;
-
   }
 
   &__head {
@@ -111,7 +110,6 @@
 
   &__name {
     font-size: 18px;
-    //  letter-spacing: normal;
   }
 }
 
@@ -155,12 +153,6 @@
       margin-bottom: 0;
     }
   }
-
-  .countries {
-    &__inner {
-      padding: 0 17px;
-    }
-  }
 }
 
 @media (max-width: 768px) {
@@ -170,7 +162,6 @@
         background-size: contain;
       }
     }
-
   }
 }
 

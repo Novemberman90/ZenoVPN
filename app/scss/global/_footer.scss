@@ -2,6 +2,8 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 32px 0 32px;
+  z-index: 1;
+  position: relative;
   background: linear-gradient(100deg, $light-opacity-01 0%, $light-opacity-06 100%);
 
   &__menu {
