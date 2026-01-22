@@ -20,11 +20,12 @@
   "srcLang": "Ar",
   "langText": "عر",
   "howItWorksHref": "#",
-  "howItWorks": "كيف يعمل",
   "pricingHref": "./#pricing",
-  "pricing": "الأسعار",
   "supportHref": "./#support",
-  "support": "الدعم",
+
+  "howItWorks": "كيف يعمل",
+  "pricing": "الأسعار",
+  "support": "الدعم"
   })
   <main class="main">
     <section class="legal">
@@ -42,16 +43,16 @@
           <div class="legal__tab-nav blur-plate">
             <h1 class="legal__tab-nav-title">الشروط والسياسة</h1>
             <div class="tab-nav">
-              <a class="tab-nav__btn" href="../terms-and-conditions.html">
+              <a class="tab-nav__btn" href="./terms-and-conditions.html">
                 <span>الشروط والأحكام</span>
               </a>
-              <a class="tab-nav__btn tab-nav__btn--active" href="../privacy-policy.html" rel="noopener noreferrer">
+              <a class="tab-nav__btn tab-nav__btn--active" href="./privacy-policy.html" rel="noopener noreferrer">
                 <span>سياسة الخصوصية</span>
               </a>
-              <a class="tab-nav__btn" href="../refund-policy.html" rel="noopener noreferrer">
+              <a class="tab-nav__btn" href="./refund-policy.html" rel="noopener noreferrer">
                 <span>سياسة استرداد الأموال</span>
               </a>
-              <a class="tab-nav__btn" href="../about-us.html" rel="noopener noreferrer">
+              <a class="tab-nav__btn" href="./about-us.html" rel="noopener noreferrer">
                 <span>معلومات عنا</span>
               </a>
             </div>
@@ -298,7 +299,39 @@
       </div>
     </section>
   </main>
-    @@include('../../components/footer.html')
+  @@include('../../components/footer.html', {
+  "extraDots": "..",
+  "footerAltlogo": "شعار ZenoVPN",
+
+  "termsHref": "./terms-and-conditions.html",
+  "privacyHref": "./privacy-policy.html",
+  "refundHref": "./refund-policy.html",
+  "aboutHref": "./about-us.html",
+  
+  "termsText": "الشروط والأحكام",
+  "privacyText": "سياسة الخصوصية",
+  "refundText": "سياسة الإرجاع",
+  "aboutText": "عننا",
+  
+  "email": "info@zenovpn.com",
+  "telegramHref": "https://t.me/ZenoVPNBot",
+  "telegramText": "@ZenoVPNBot",
+  
+  "telegramHidden": "تقل إلى قناة Telegram ZenoVPN",
+  "instagramHref": "https://t.me/ZenoVPNBot",
+  "instagramHidden": "انتقل إلى صفحة ZenoVPN على Instagram",
+  
+  "xHref": "https://t.me/ZenoVPNBot",
+  "xHidden": "انتقل إلى قناة X ZenoVPN",
+  
+  "facebookHref": "https://t.me/ZenoVPNBot",
+  "facebookHidden": "انتقل إلى صفحة ZenoVPN على Facebook",
+  
+  "tiktokHref": "https://t.me/ZenoVPNBot",
+  "tiktokHidden": "انتقل إلى صفحة ZenoVPN على TikTok",
+  
+  "copyright": "حقوق النشر: © 2025 Zeno VPN. جميع الحقوق محفوظة."
+  })
   <script src="../js/main.min.js"></script>
 
 </body>
