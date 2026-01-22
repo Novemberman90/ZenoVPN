@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -53,13 +53,13 @@
     <link rel="stylesheet" href="../css/style.min.css">
 </head>
 
-<body class="body">
+<body>
   <header class="header" data-header>
     <div class="container">
         <nav class="menu">
             <a class="logo header__logo" href="@@logoHref">
-                <img class="logo__img header__logo-img" src="../images/logo.svg" alt="شعار ZenoVPN" width="146" height="58">
-                <img class="logo__img header__logo-img--small" src="../images/logo-mob.svg" alt="شعار ZenoVPN" width="47" height="58">
+                <img class="logo__img header__logo-img" src="../images/logo.svg" alt="ZenoVPN Logo" width="146" height="58">
+                <img class="logo__img header__logo-img--small" src="../images/logo-mob.svg" alt="ZenoVPN Logo" width="47" height="58">
             </a>
             <button class="mobile-button blur-plate" type="button" data-menu-button>
                 <span class="visually-hidden">
@@ -71,17 +71,17 @@
             <ul class="menu__list " data-menu>
                 <li class="menu__item">
                     <a class="menu__link" href="#">
-                        كيف يعمل
+                        Как это работает
                     </a>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="./#pricing">
-                        الأسعار
+                        Цены
                     </a>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="./#support">
-                        الدعم
+                        Поддержка
                     </a>
                 </li>
             </ul>
@@ -89,10 +89,10 @@
                 <div class="switcher-lang">
                     <button class="switcher-lang__btn blur-plate" data-lang-switcher type="button">
                         <svg width="24" height="24">
-                            <use href="../images/sprite.svg#flagAr"></use>
+                            <use href="../images/sprite.svg#flagRu"></use>
                         </svg>
                         <span class="switcher-lang__text">
-                            عر          
+                            Ру          
                         </span> 
                         <svg class="switcher-lang__arrow" width="18" height="18">
                             <use href="../images/sprite.svg#angle-down"></use>
@@ -100,7 +100,7 @@
                     </button>
                     <ul class="switcher-lang__list blur-plate" data-langs-list>
                         <li class="switcher-lang__item">
-                            <a class="switcher-lang__link @@current" href="../about-us.html">
+                            <a class="switcher-lang__link @@current" href="@@langHrefEn">
                                 <svg class="switcher-lang__icon" width="24" height="24">
                                     <use href="../images/sprite.svg#flagEn"></use>
                                 </svg>
@@ -110,7 +110,7 @@
                             </a>
                         </li>
                         <li class="switcher-lang__item">
-                            <a class="switcher-lang__link current" href="@@langHrefAr">
+                            <a class="switcher-lang__link @@currentAr" href="../ar/refund-policy.html">
                                 <svg class="switcher-lang__icon" width="24" height="24">
                                     <use href="../images/sprite.svg#flagAr"></use>
                                 </svg>
@@ -120,7 +120,7 @@
                             </a>
                         </li>
                         <li class="switcher-lang__item">
-                            <a class="switcher-lang__link @@currentRu" href="../ru/about-us.html">
+                            <a class="switcher-lang__link current" href="@@langHrefRu">
                                 <svg class="switcher-lang__icon" width="24" height="24">
                                     <use href="../images/sprite.svg#flagRu"></use>
                                 </svg>
@@ -145,8 +145,9 @@
         </nav>
     </div>
 </header>
+
   <main class="main">
-  
+
     <section class="legal">
       <div class="container">
         <div class="top">
@@ -154,193 +155,131 @@
   <ul class="breadcrumbs__list">
     <li class="breadcrumbs__item">
       <a class="breadcrumbs__link" href="./">
-        بيت
+        Главная
       </a>
     </li>
     <li class="breadcrumbs__item">
-      <a class="breadcrumbs__link" href="./about-us.html">
-        معلومات عنا
+      <a class="breadcrumbs__link" href="./refund-policy.html">
+        Политика возврата
       </a>
     </li>
   </ul>
 </div>
         </div>
-  
+
         <div class="legal__inner">
           <div class="legal__tab-nav blur-plate">
-            <h1 class="legal__tab-nav-title">الشروط والسياسة</h1>
+            <h1 class="legal__tab-nav-title">Условия и политика</h1>
             <div class="tab-nav">
               <a class="tab-nav__btn" href="./terms-and-conditions.html">
-                <span>الشروط والأحكام</span>
+                <span>Пользовательское соглашение</span>
               </a>
-              <a class="tab-nav__btn " href="./privacy-policy.html" rel="noopener noreferrer">
-                <span>سياسة الخصوصية</span>
+              <a class="tab-nav__btn" href="./privacy-policy.html" rel="noopener noreferrer">
+                <span>Политика данных</span>
               </a>
-              <a class="tab-nav__btn" href="./refund-policy.html" rel="noopener noreferrer">
-                <span>سياسة استرداد الأموال</span>
+              <a class="tab-nav__btn tab-nav__btn--active" href="./refund-policy.html" rel="noopener noreferrer">
+                <span>Политика возврата</span>
               </a>
-              <a class="tab-nav__btn tab-nav__btn--active" href="./about-us.html" rel="noopener noreferrer">
-                <span>معلومات عنا</span>
+              <a class="tab-nav__btn" href="./about-us.html" rel="noopener noreferrer">
+                <span>О нас</span>
               </a>
             </div>
           </div>
           <div class="legal__tabs-content tab">
-            <!-- About us -->
-            <div class="tab__item" id="btn_4">
+            <!-- Refund Policy -->
+            <div class="tab__item" id="btn_3">
               <div class="tab__inner">
-                <div class="aboutUs">
-                  <h2 class="aboutUs__main-title">
-                    معلومات عنا
+                <div class="refund">
+                  <h2 class="refund__main-title">
+                    Политика возврата
                   </h2>
-  
-                  <!-- 1. Our Mission: Your Digital Freedom Fortress -->
-                  <section class="aboutUs__section">
-                    <h3 class="aboutUs__title">
-                      قلعتنا الرقمية: مهمتنا هي حمايتك
+            
+                  <!-- 1. 14-Day Money-Back Guarantee -->
+                  <section class="refund__section">
+                    <h3 class="refund__title">
+                      1. 14-дневная гарантия возврата денег
                     </h3>
-  
-                    <p class="aboutUs__descr">
-                      في عصر تزداد فيه المراقبة الرقمية والرقابة، نعتقد أن لكل شخص الحق في إنترنت حر ومفتوح. مهمتنا هي تزويدك بأداة قوية وآمنة
-                      وسهلة الاستخدام لحماية خصوصيتك على الإنترنت وتجاوز القيود. ZenoVPN هو حصنك في العالم الرقمي.
+            
+                    <p class="refund__descr">
+                      Мы стремимся к вашему удовлетворению. Если вы не полностью удовлетворены нашими Услугами, вы можете запросить полный возврат средств в течение 14 дней с момента первоначальной покупки.
                     </p>
                   </section>
-  
-                  <!-- 2. Who We Are -->
-                  <section class="aboutUs__section">
-                    <h3 class="aboutUs__title">
-                      من نحن
+            
+                  <!-- 2. How to Request a Refund -->
+                  <section class="refund__section">
+                    <h3 class="refund__title">
+                      2. 2. Как запросить возврат средств
                     </h3>
-  
-                    <p class="aboutUs__descr">
-                      نحن فريق من دعاة الخصوصية وخبراء الأمن السيبراني وعشاق التكنولوجيا المكرسين لبناء إنترنت أفضل. تأسسنا على مبادئ الخصوصية
-                      والأمان والحرية. نؤمن بأن بياناتك ملك لك، ونحن ملتزمون بحمايتها.
-
+                    <p class="refund__descr">
+                      Чтобы запросить возврат средств, обратитесь в нашу службу поддержки клиентов по адресу <a href="mailto:info@zenovpn.com"
+                        class="accent-link">info@zenovpn.com</a> с информацией о вашей учетной записи и причиной вашего запроса. Все запросы на возврат средств подлежат утверждению
+                        нашей службой поддержки и рассматриваются в индивидуальном порядке.
+                    </p>
+            
+                  </section>
+            
+                  <!-- 3. Refund Processing -->
+                  <section class="refund__section">
+                    <h3 class="refund__title">
+                      3. Обработка возврата
+                    </h3>
+            
+                    <p class="refund__descr refund__descr--mb">
+                      После утверждения вашего запроса на возврат средств мы обработаем возврат по вашему первоначальному способу оплаты.
+                      Возврат средств появится на вашем счете в течение 5–10 рабочих дней
+                    </p>
+            
+                    <!-- 3.1 Account Information -->
+                    <h4 class="refund__subtitle">
+                      3.1 Возврат в криптовалюте
+                    </h4>
+                    <p class="refund__descr refund__descr">
+                      Для платежей, совершенных в криптовалюте, возврат будет произведен в той же криптовалюте. Сумма возврата будет
+                      эквивалентна стоимости вашей покупки в долларах США на момент транзакции. Любые комиссии за транзакции в блокчейне,
+                      связанные с возвратом, будут вашей ответственностью.
                     </p>
                   </section>
-  
-                  <!-- 3. What We Do -->
-                  <section class="aboutUs__section">
-                    <h3 class="aboutUs__title">
-                      ماذا نفعل
+            
+                  <!-- 4. Exclusions -->
+                  <section class="refund__section">
+                    <h3 class="refund__title">
+                      4. Исключения
                     </h3>
-  
-                    <p class="aboutUs__descr">
-                      تقدم ZenoVPN خدمة VPN متطورة تعتمد على بروتوكول VLESS الحديث والفعال.
-                      تم تصميم خدمتنا لتكون سريعة وموثوقة وآمنة، مما يتيح لك تصفح صفحات الويب دون قيود.
-                      <br><br>
-                      نحن خدمة تركز في المقام الأول على Telegram، ونقدم واجهة سهلة الاستخدام وبديهية بفضل بوت Telegram القوي الخاص بنا. يتيح
-                      ذلك إعداد الخدمة بسرعة وسهولة، وإدارة اشتراكك، والوصول إلى
-                      شبكة خوادمنا العالمية.
-                    </p>
-                  </section>
-  
-                  <!-- 4. Our Values -->
-                  <section class="aboutUs__section">
-                    <h3 class="aboutUs__title">
-                      ماذا نفعل
-
-                    </h3>
-                    <ul class="aboutUs__list">
-                      <li class="aboutUs__item">
-                        <span class="aboutUs__text aboutUs__text--bold">الخصوصية:</span>
-                        <span class="aboutUs__text">
-                          خصوصيتك هي أولويتنا. نلتزم بسياسة عدم الاحتفاظ بالسجلات، مما يعني أننا لا نتتبع أو نخزن أو نشارك نشاطك على الإنترنت.
-                        </span>
-                      </li>
-                      <li class="aboutUs__item">
-                        <span class="aboutUs__text aboutUs__text--bold">
-                          الأمان:
-                        </span>
-                        <span class="aboutUs__text">
-                          نستخدم تشفيراً بمستوى عسكري وأحدث بروتوكولات الـ VPN للحفاظ على بياناتك بعيداً عن المتطفلين.
-                        </span>
-                      </li>
-                      <li class="refund__item">
-                        <span class="aboutUs__text aboutUs__text--bold">
-                          الحرية:
-                        </span>
-                        <span class="aboutUs__text">
-                          نؤمن بإنترنت مفتوح للجميع. تساعدك خدمتنا على تجاوز الرقابة والوصول إلى المحتوى الذي تريده أينما كنت.
-                        </span>
-                      </li>
-                      <li class="aboutUs__item">
-                        <span class="aboutUs__text aboutUs__text--bold">
-                          الشفافية:
-                        </span>
-                        <span class="aboutUs__text">
-                          نحن ملتزمون بالانفتاح والصدق مع مستخدمينا. نؤمن بأن الثقة تُكتسب عبر الشفافية.
-                        </span>
-                      </li>
+                    <ul class="refund__list">
+                      <li class="refund__item">Эта гарантия возврата денег распространяется только на вашу первоначальную покупку.</li>
+                      <li class="refund__item">Возврат средств за продление подписки не производится.</li>
+                      <li class="refund__item">Платежи, совершенные с помощью предоплаченных карт или подарочных карт, могут не подлежать возврату.</li>
+                      <li class="refund__item">Учетные записи, действие которых прекращено за нарушение наших Условий использования, не подлежат возврату.</li>
                     </ul>
                   </section>
-  
-                  <!-- 5. Why Choose ZenoVPN? -->
-                  <section class="aboutUs__section">
-                    <h3 class="aboutUs__title">
-                      لماذا يختارون ZenoVPN؟
+            
+                  <!-- 5. Third-Party Purchases -->
+                  <section class="refund__section">
+                    <h3 class="refund__title">
+                      5. Покупки у третьих лиц
                     </h3>
-                    <ul class="aboutUs__list">
-                      <li class="aboutUs__item">
-                        <span class="aboutUs__text aboutUs__text--bold">
-                          تكنولوجيا حديثة:
-                        </span>
-                        <span class="aboutUs__text">
-                          نستخدم بروتوكول VLESS المصمم للأداء والأمان.
-                        </span>
-                      </li>
-                      <li class="aboutUs__item">
-                        <span class="aboutUs__text aboutUs__text--bold">
-                          يعتمد على Telegram:
-                        </span>
-                        <span class="aboutUs__text">
-                          يمكنك إدارة الـ VPN مباشرة من Telegram، أحد أشهر وأكثر تطبيقات المراسلة أماناً في العالم.
-                        </span>
-                      </li>
-                      <li class="refund__item">
-                        <span class="aboutUs__text aboutUs__text--bold">
-                          شبكة عالمية::
-                        </span>
-                        <span class="aboutUs__text">
-                          الوصول إلى شبكتنا من الخوادم عالية السرعة حول العالم.
-                        </span>
-                      </li>
-                      <li class="aboutUs__item">
-                        <span class="aboutUs__text aboutUs__text--bold">
-                        سياسة عدم الاحتفاظ بالسجلات:
-                        </span>
-                        <span class="aboutUs__text">
-                          لا نقوم أبداً بتسجيل نشاطك. خصوصيتك مضمونة.
-                        </span>
-                      </li>
-                      <li class="aboutUs__item">
-                        <span class="aboutUs__text aboutUs__text--bold">
-                          دعم على مدار الساعة:
-                        </span>
-                        <span class="aboutUs__text">
-                          فريق الدعم الخاص بنا جاهز دائماً لمساعدتك.
-                        </span>
-                      </li>
-                    </ul>
+            
+                    <p class="refund__descr">
+                      Если вы приобрели подписку через стороннюю платформу (например, Apple App Store, Google Play Store), вы должны соблюдать
+                      политику возврата средств этой платформы. Мы не можем обрабатывать возврат средств за покупки, совершенные через третьих
+                      лиц.
+                    </p>
                   </section>
-  
-                  <!-- 6. Join Us -->
-                  <section class="aboutUs__section">
-                    <h3 class="aboutUs__title">
-                      انضم إلينا
+            
+                  <!-- 6. Contact Us -->
+                  <section class="refund__section">
+                    <h3 class="refund__title">
+                      6. Контакты
                     </h3>
-  
-                    <p class="aboutUs__descr">
-                      تحكم في حياتك الرقمية. انضم إلى مجتمع ZenoVPN واستمتع بالإنترنت بلا حدود.
+            
+                    <p class="refund__descr refund__descr--mb0">
+                      Если у вас есть вопросы о нашей политике возврата, пожалуйста, свяжитесь с нами по адресу
                     </p>
-                    <p class="aboutUs__descr">
-                      اتصل بنا: <a href="mailto:info@zenovpn.com" class="accent-link">
-                        info@zenovpn.com
-                      </a>
-                    </p>
-  
+                    <a href="mailto:info@zenovpn.com" class="accent-link">info@zenovpn.com</a>
                   </section>
+            
                 </div>
-  
+            
               </div>
             </div>
           </div>
@@ -348,7 +287,6 @@
       </div>
     </section>
   </main>
-
   <footer class="footer">
   <div class="container">
     <nav class="footer__menu">
@@ -358,22 +296,22 @@
       <ul class="footer__menu-list">
           <li class="footer__menu-item">
             <a class="footer__menu-link" href="./terms-and-conditions.html">
-              الشروط والأحكام
+              Условия и положения
             </a>
           </li>
           <li class="footer__menu-item">
             <a class="footer__menu-link" href="./privacy-policy.html">
-              سياسة الخصوصية
+              Политика конфиденциальности
             </a>
           </li>
           <li class="footer__menu-item">
             <a class="footer__menu-link" href="./refund-policy.html">
-              سياسة الإرجاع
+              Политика возврата
             </a>
           </li>
           <li class="footer__menu-item">
             <a class="footer__menu-link" href="./about-us.html">
-              عننا
+              О нас
             </a>
           </li>
       </ul>
@@ -404,7 +342,7 @@
               <use href="../images/sprite.svg#telegram"></use>
             </svg>
             <span class="visually-hidden">
-              تقل إلى قناة Telegram ZenoVPN
+              Go to ZenoVPN Telegram channel
             </span>
           </a>
         </li>
@@ -414,7 +352,7 @@
               <use href="../images/sprite.svg#instagram"></use>
             </svg>
             <span class="visually-hidden">
-              انتقل إلى صفحة ZenoVPN على Instagram
+              Go to ZenoVPN Instagram page
             </span>
           </a>
         </li>
@@ -424,7 +362,7 @@
               <use href="../images/sprite.svg#twitter"></use>
             </svg>
             <span class="visually-hidden">
-              انتقل إلى قناة X ZenoVPN
+              Go to ZenoVPN X channel
             </span>
           </a>
         </li>
@@ -434,7 +372,7 @@
               <use href="../images/sprite.svg#facebook"></use>
             </svg>
             <span class="visually-hidden">
-              انتقل إلى صفحة ZenoVPN على Facebook
+              Go to ZenoVPN Facebook page
             </span>
           </a>
         </li>
@@ -444,19 +382,20 @@
                 <use href="../images/sprite.svg#tiktok"></use>
               </svg>
               <span class="visually-hidden">
-                انتقل إلى صفحة ZenoVPN على TikTok
+                Go to ZenoVPN TikTok page
               </span>
             </a>
         </li>
       </ul>
     </address>
       <p class="footer__copyright">
-        حقوق النشر: © 2025 Zeno VPN. جميع الحقوق محفوظة.
+        Copyright: © 2025 Zeno VPN. All rights reserved.
       </p>
   </div>
 </footer>
-  <script src="../js/main.min.js"></script>
 
+
+  <script src="../js/main.min.js"></script>
 </body>
 
 </html>
