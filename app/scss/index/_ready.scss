@@ -112,6 +112,8 @@
 
   &__item-descr {
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
   }
 
   &__item-accent {

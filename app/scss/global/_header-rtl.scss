@@ -1,0 +1,22 @@
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+
+  .header {
+    &__logo {
+      margin-right: 0;
+      margin-left: 48px;
+    }
+    .menu {
+      &__list {
+        margin-right: 0;
+        margin-left: auto;
+      }
+      .user-menu {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+  }
+
+}

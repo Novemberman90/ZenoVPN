@@ -133,6 +133,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 72px 0 72px;
+    margin-left: 15px;
   }
 
   &__stats {
@@ -282,7 +283,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1064px) {
   .reviews {
     padding-bottom: 62px;
     &__wrapper {
@@ -305,6 +306,7 @@
       width: 100%;
       height: auto;
       padding: 0 80px 0 80px;
+      margin-left: 0;
     }
 
     &__img {

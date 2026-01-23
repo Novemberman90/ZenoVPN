@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
             depth: 190,
           },
         },
-        1025: {
+        1065: {
           direction: 'vertical',
           coverflowEffect: {
             stretch: 280,

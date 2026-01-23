@@ -58,7 +58,7 @@
     font-size: 24px;
     font-weight: 700;
     padding-bottom: 15px;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     letter-spacing: normal;
     position: relative;
 
@@ -84,7 +84,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 23px;
 
   &__btn {
     background-color: transparent;
@@ -96,7 +96,6 @@
     outline-offset: 5px;
     transition: color 0.3s, border-color 0.3s, outline 0.3s;
     position: relative;
-    padding-bottom: 1px;
 
 
     &:hover {
@@ -153,6 +152,7 @@
     font-size: 56px;
     margin-bottom: 32px;
     font-weight: 500;
+    line-height: 1.2;
     letter-spacing: normal;
   }
 
@@ -161,12 +161,14 @@
     margin-bottom: 16px;
     letter-spacing: normal;
     font-weight: 500;
+    line-height: 1.2;
   }
 
   &__subtitle {
     font-size: 24px;
     margin-bottom: 16px;
     font-weight: 500;
+    line-height: 1.2;
 
     &--pt {
       padding-top: 32px;
@@ -175,6 +177,7 @@
 
   &__descr {
     font-size: 18px;
+    padding-right: 2px;
 
     &--mb {
       margin-bottom: 16px;
@@ -207,6 +210,7 @@
     padding-left: 38px;
     position: relative;
     margin-bottom: 12px;
+    line-height: 1.2;
 
     &:first-child {
       padding-top: 6px;
@@ -273,6 +277,9 @@
 
     &__subtitle {
       font-size: 24px;
+    }
+    &__descr {
+      padding-right: 0;
     }
   }
 }

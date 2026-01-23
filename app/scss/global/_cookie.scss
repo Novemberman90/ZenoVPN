@@ -10,6 +10,7 @@
   background: linear-gradient(75.18deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.06) 100%);
   pointer-events: none;
   transition: opacity 0.3s, transform 0.3s;
+  padding: 0;
 
   &::after {
     padding: 1px;
