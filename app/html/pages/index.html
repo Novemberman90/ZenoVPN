@@ -14,19 +14,20 @@
   @@include('../components/header.html', {
   "extraDots": ".",
   "altLogo": "ZenoVPN Logo",
+  "logoHref": "#",
   "current": "current",
   "langHrefAr": "./ar/",
   "langHrefRu": "./ru/",
   "srcLang": "En",
   "langText": "En",
 
-  "howItWorksHref": "#",
+  "howItWorksHref": "#steps",
   "pricingHref": "#pricing",
   "supportHref": "#support",
 
   "howItWorks": "How it Work’s",
   "pricing": "Pricing",
-  "support": "Support",
+  "support": "Support"
   })
   <main class="main">
     <h1 class="visually-hidden">
@@ -107,7 +108,7 @@
         </div>
       </div>
     </section>
-    <section class="steps section">
+    <section class="steps section" id="steps">
       <div class="container steps__container">
         <h2 class="steps__title title">
           Get Started in <span class="accent">3 Simple</span> Steps
@@ -1226,6 +1227,7 @@
   </main>
 @@include('../components/footer.html', {
 "extraDots": ".",
+"footerHref": "#hero",
 "footerAltlogo": "ZenoVPN Logo",
 
 "termsHref": "./terms-and-conditions.html",

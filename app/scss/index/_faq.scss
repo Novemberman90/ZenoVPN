@@ -76,6 +76,7 @@
         }
 
         &.is-open {
+
             &::after {
                 background: linear-gradient(5.35deg, $accent-opacity-00 72.32%, $accent 94.79%), linear-gradient(185.43deg, $accent-opacity-00 64.44%, $accent 100%);
             }
@@ -87,6 +88,7 @@
 
             .faq__icon {
                 transform: rotate(180deg);
+                top: 22px;
             }
         }
     }
@@ -116,8 +118,11 @@
     }
 
     &__icon {
-        flex-shrink: 0;
-        transition: transform 0.3s;
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s, top 0.3s;
     }
 }
 
