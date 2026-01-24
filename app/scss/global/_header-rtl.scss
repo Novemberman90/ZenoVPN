@@ -8,23 +8,45 @@ html[dir="rtl"] {
       margin-right: 0;
     }
 
-    .menu {
-      &__list {
-        margin-right: 0;
-        margin-left: auto;
-      }
-
-      .user-menu {
-        margin-left: 0;
-        margin-right: auto;
-      }
+  }
+  .menu {
+    &__list {
+      margin-right: 0;
+      margin-left: auto;
     }
+
+  }
+  .user-menu {
+    margin-left: 0;
+    margin-right: auto;
   }
 
   @media(max-width: 992px) {
     .header {
       &__logo {
         margin-left: 0;
+      }
+    }
+    .menu {
+      &__list {
+        right: auto;
+        left: 0;
+      }
+    }
+    .user-menu {
+      margin-left: 8px;
+    }
+  }
+
+}
+
+@media(max-width: 576px) {
+  .switcher-lang {
+    &__link {
+      &::after {
+        left: auto;
+        right: 50%;
+        transform: translate(50%, -50%);
       }
     }
   }

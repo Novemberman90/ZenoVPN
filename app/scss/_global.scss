@@ -232,6 +232,10 @@ body {
     }
 }
 
+@media (max-width: 640px) {
+
+}
+
 @media(max-width:576px) {
     .main {
         padding-top: 77px;
@@ -240,12 +244,10 @@ body {
             background-image: url('../images/linear-grid-mob.svg');
         }
     }
-
     .container {
-        padding: 0 16px;
-        max-width: 1220px;
+      padding: 0 16px;
+      max-width: 1220px;
     }
-
     .section {
         padding-bottom: 80px;
     }

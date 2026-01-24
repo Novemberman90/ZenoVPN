@@ -53,10 +53,32 @@
     align-items: flex-end;
     gap: 24px;
   }
+  &__card {
+    &--upload,
+    &--latency {
+      max-width: 260px;
+      width: 100%;
+    }
+    &--download {
+      max-width: 418px;
+      width: 100%;
+    }
+  }
 
   &__card-inner {
     position: relative;
     padding-top: 37px;
+    width: 100%;
+    &--upload,
+    &--latency {
+      max-width: 260px;
+      width: 100%;
+    }
+  
+    &--download {
+      max-width: 418px;
+      width: 100%;
+    }
   }
 
   &__card-icon {
@@ -136,8 +158,8 @@
 
   &--upload,
   &--latency {
-    max-width: 260px;
-    width: 260px;
+   // max-width: 260px;
+   // width: 260px;
     padding: 50px 24px 16px;
 
     &.blur-plate::after {
@@ -147,8 +169,8 @@
   }
 
   &--download {
-    max-width: 418px;
-    width: 418px;
+   // max-width: 418px;
+   // width: 418px;
     padding: 58px 53px 29px;
 
     .metric-card__value-num {
@@ -232,6 +254,7 @@
 
       &--download {
         order: 1;
+        max-width: 100%;
         width: 100%;
         justify-content: center;
       }
@@ -241,6 +264,7 @@
         flex: 1 1 260px;
         margin-left: auto;
         justify-content: flex-end;
+        max-width: calc((100% - 24px) / 2);
       }
 
       &--latency {
@@ -248,6 +272,7 @@
         flex: 1 1 260px;
         margin-right: auto;
         justify-content: flex-start;
+        max-width: calc((100% - 24px) / 2);
       }
     }
   }
@@ -356,6 +381,7 @@
 
       &--download {
         padding-top: 36px;
+        max-width: 356px;
       }
     }
 
@@ -390,7 +416,6 @@
   .metric-card {
     &--download {
       padding: 51px 23px 29px;
-      max-width: 356px;
 
       .metric-card__label {
         font-size: 32px;
@@ -466,8 +491,8 @@
       &--upload,
       &--latency {
         flex: 168px;
+        max-width: 100%;
       }
-
     }
   }
 
@@ -497,7 +522,7 @@
 
       &--upload,
       &--latency {
-        bottom: -4px;
+        bottom: -26px;
       }
 
       &--download {
@@ -541,6 +566,13 @@
       //    width: 100%;
       //    height: auto;
       //  }
+    }
+    &__progress-box {
+
+      &--upload,
+      &--latency {
+        bottom: -4px;
+      }
     }
 
     &__label {
