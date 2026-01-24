@@ -19,6 +19,7 @@
   "langHrefEn": "../",
   "srcLang": "Ru",
   "langText": "Ру",
+  "extraDots": "..",
   "mobileButtonAccessibility": "Открыть меню навигации / Закрыть меню навигации",
   "howItWorksHref": "#steps",
   "pricingHref": "#pricing",
@@ -79,7 +80,7 @@
             </li>
             <li class="hero__item hero__item--privacy blur-plate">
               <h3 class="hero__subtitle">
-                Конфиденциальность прежде всего
+                Приватность прежде всего
               </h3>
               <p class="hero__description">
                 Шифрование военного уровня и строгая политика no-logs для защиты ваших данных.
@@ -144,7 +145,7 @@
           <li class="steps__item blur-plate">
             <div class="steps__info">
               <h3 class="steps__subtitle">
-                Подключитесь и думайте свободно
+                Включите VPN
               </h3>
               <p class="steps__description">
                 Получите VPN-ключ и подключитесь мгновенно
@@ -166,7 +167,7 @@
         </h2>
         <div class="metrics__header">
           <h2 class="metrics__title title">
-            <span class="accent">Производительность</span> в реальном времени
+            <span class="accent">Скорость</span> в реальном времени
           </h2>
           <ul class="metrics__list">
             <li class="metrics__item">
@@ -424,6 +425,7 @@
             @@include('../../components/plan-card.html', {
             "planCardClass": "plan-card--trial",
             "title": "Пробный",
+            "extraDots": "..",
             "period": "1 месяц",
             "price": "Бесплатно",
             "showDiscount": false,
@@ -434,6 +436,7 @@
             @@include('../../components/plan-card.html', {
             "planCardClass": "plan-card--monthly",
             "title": "Ежемесячно",
+            "extraDots": "..",
             "period": "1 месяц",
             "price": "$10",
             "showDiscount": false,
@@ -444,6 +447,7 @@
             @@include('../../components/plan-card.html', {
             "planCardClass": "plan-card--semi-annual",
             "title": "На полгода",
+            "extraDots": "..",
             "period": "6 месяцев",
             "badgePopularText": "Самый популярный",
             "price": "$20",
@@ -455,6 +459,7 @@
             @@include('../../components/plan-card.html', {
             "planCardClass": "plan-card--annual",
             "title": "Annual",
+            "extraDots": "..",
             "period": "12 months",
             "price": "$30",
             "showDiscount": true,
@@ -730,16 +735,16 @@
                 <!-- id -->
                 <div class="countries__item blur-plate" data-country="ID">
                   <svg class="countries__icon" width="24" height="24">
-                    <use href=".../images/sprite.svg#country-id"></use>
+                    <use href="../images/sprite.svg#country-id"></use>
                   </svg>
                   <p class="countries__name">Индонезия</p>
                 </div>
                 <!-- ae -->
                 <div class="countries__item blur-plate" data-country="AE">
                   <svg class="countries__icon" width="24" height="24">
-                    <use href=".../images/sprite.svg#country-ae"></use>
+                    <use href="../images/sprite.svg#country-ae"></use>
                   </svg>
-                  <p class="countries__name">Объединенные Арабские Эмираты</p>
+                  <p class="countries__name">Арабские Эмираты</p>
                 </div>
                 <!-- br -->
                 <div class="countries__item blur-plate" data-country="BR">
@@ -1028,7 +1033,7 @@
     <section class="apps section">
       <div class="container">
         <h2 class="apps__title title">
-          Поддерживаемые <span class="accent">VPN-приложения</span>
+          VPN-<span class="accent">приложения</span>
         </h2>
         <p class="apps__description">
           Выберите удобное приложение. Все приложения поддерживают наш протокол VLESS.
@@ -1064,7 +1069,7 @@
     <section class="faq section">
       <div class="container">
         <h2 class="faq__title title">
-          Вопросы<span class="accent">?</span> We Have <span class="accent">ответы</span>
+          Вопросы<span class="accent">?</span> У нас есть <span class="accent">ответы</span>
         </h2>
         <ul class="faq__list">
           <li class="faq__item blur-plate" data-accordion>
@@ -1165,61 +1170,51 @@
         <div class="ready__inner">
           <div class="ready__img-box">
             <picture>
-              <!-- Mobile (<576px) -->
-              <source media="(max-width: 575px)" type="image/webp"
-                srcset=".../images/ready/astronaut-ready-mob.webp 1x,.../images/ready/astronaut-ready-mob-x2.webp 2x" />
-              <source media="(max-width: 575px)" type="image/png"
-                srcset=".../images/ready/astronaut-ready-mob.png 1x,.../images/ready/astronaut-ready-mob-x2.png 2x" />
-
-              <!-- Desktop -->
-              <source type="image/webp" srcset="
-                .../images/ready/astronaut-ready.webp 1x, .../images/ready/astronaut-ready-x2.webp 2x" />
-              <source type="image/png"
-                srcset=".../images/ready/astronaut-ready.png 1x, .../images/ready/astronaut-ready-x2.png 2x" />
-
-              <img class="ready__img" src=".../images/ready/astronaut-ready.png" width="529" height="564"
+              <source media="(max-width: 575px)" type="image/webp" srcset="../images/ready/astronaut-ready-mob.webp 1x, ../images/ready/astronaut-ready-mob-x2.webp 2x" />
+              <source media="(max-width: 575px)" type="image/png" srcset="../images/ready/astronaut-ready-mob.png 1x, ../images/ready/astronaut-ready-mob-x2.png 2x" />
+              <source type="image/webp" srcset="../images/ready/astronaut-ready.webp 1x, ../images/ready/astronaut-ready-x2.webp 2x" />
+              <source type="image/png" srcset="../images/ready/astronaut-ready.png 1x, ../images/ready/astronaut-ready-x2.png 2x" />
+              <img class="ready__img" src="../images/ready/astronaut-ready.png" width="529" height="564"
                 alt="ZenoVPN Ready to Think Free" loading="lazy" />
             </picture>
           </div>
           <div class="ready__content">
             <h2 class="title ready__title">
-              Готовы быть <span class="ready__title-accent">свободным?</span>
+              Готовы думать <span class="ready__title-accent">свободно?</span>
             </h2>
             <div class="ready__info">
               <div class="ready__item ready__item--support">
                 <picture>
                   <source type="image/webp"
-                    srcset=".../images/ready/earphones.webp 1x, .../images/ready/earphones-x2.webp 2x" />
+                    srcset="../images/ready/earphones.webp 1x, ../images/ready/earphones-x2.webp 2x" />
                   <source type="image/png"
-                    srcset=".../images/ready/earphones.png 1x, .../images/ready/earphones-x2.png 2x" />
-                  <img class="ready__icon" src=".../images/ready/earphones.png" width="64" height="64"
+                    srcset="../images/ready/earphones.png 1x, ../images/ready/earphones-x2.png 2x" />
+                  <img class="ready__icon" src="../images/ready/earphones.png" width="64" height="64"
                     alt="ZenoVPN 24/7 поддержка через Telegram ?" loading="lazy" />
                 </picture>
                 <div class="ready__item-descr">
-                  24/7
-                  <span class="ready__item-accent">поддержка</span>
-                  через Telegram
+                  <span class="ready__item-accent">Поддержка</span>
+                  24/7 через Telegram
                 </div>
               </div>
               <div class="ready__item ready__item--guarantee">
                 <picture>
                   <source type="image/webp"
-                    srcset=".../images/ready/guarantee.webp 1x, .../images/ready/guarantee-x2.webp 2x" />
+                    srcset="../images/ready/guarantee.webp 1x, ../images/ready/guarantee-x2.webp 2x" />
                   <source type="image/png"
-                    srcset=".../images/ready/guarantee.png 1x, .../images/ready/guarantee-x2.png 2x" />
-                  <img class="ready__icon" src=".../images/ready/guarantee.png" width="64" height="64"
+                    srcset="../images/ready/guarantee.png 1x, ../images/ready/guarantee-x2.png 2x" />
+                  <img class="ready__icon" src="../images/ready/guarantee.png" width="64" height="64"
                     alt="ZenoVPN 30 дней возврат денег гарантированно" loading="lazy" />
                 </picture>
                 <div class="ready__item-descr">
-                  30 дней
-                  <span class="ready__item-accent">возврат денег</span>
-                  гарантированно
+                  30‑дневная 
+                  <span class="ready__item-accent">гарантия возврата денег</span>
                 </div>
               </div>
             </div>
             @@include('../../components/cta.html', {
             "ctaClass":"ready__cta",
-            "ctaText": "Начните работу в Telegram",
+            "ctaText": "Начать в Telegram",
             "ctaWidth": "24",
             "ctaHeight": "24",
             "ctaIcon": "telegram",
@@ -1233,7 +1228,7 @@
     </section>
   </main>
 @@include('../../components/footer.html', {
-  "extraDots": ".",
+  "extraDots": "..",
   "footerHref": "#hero",
   "footerAltlogo": "ZenoVPN Logo",
   "termsHref": "./terms-and-conditions.html",
@@ -1260,13 +1255,13 @@
 })
 
   @@include('../../components/go-top.html', {
-  "extraDots": ".",
+  "extraDots": "..",
   "target": "#header",
   "accessibility": "Прокрутить вверх"
   })
 
   @@include('../../components/cookie.html', {
-  "extraDots": ".",
+  "extraDots": "..",
   "cookieNotice": "Cookie-уведомление",
   "cookieTextLeft": "Наш сайт использует",
   "cookieLink": "Файлы cookie",

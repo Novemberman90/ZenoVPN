@@ -3,7 +3,7 @@
   position: relative;
 
   &__header {
-    max-width: 608px;
+    max-width: 1135px;
     width: 100%;
     margin: 0 auto 48px auto;
   }
@@ -20,7 +20,6 @@
   }
 
   &__item {
-    width: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,6 +38,7 @@
     font-weight: 700;
     font-size: 24px;
     color: $accent;
+    letter-spacing: normal;
   }
 
   &__info {
@@ -209,6 +209,7 @@
     width: 100%;
     bottom: -4px;
   }
+
   &__progress-line {
     width: 100%;
   }
@@ -301,12 +302,13 @@
       bottom: -593px;
     }
 
-    &__header {
-      margin-bottom: 32px;
+    &__list {
+      flex-wrap: wrap;
+      gap: 30px 57px;
     }
 
-    &__list {
-      gap: 28px;
+    &__header {
+      margin-bottom: 32px;
     }
 
     &__item-title {
@@ -415,18 +417,8 @@
         font-size: 14px;
       }
 
-     // .metric-card__progress-box svg {
-     //   width: 191px;
-     //   height: auto;
-     //   path {
-     //     stroke-width: 10px;
-     //   }
-     // }
       .metric-card__progress-line {
         width: 100%;
-      //  path {
-      //    stroke-width: 10px;
-      //  }
       }
     }
 
@@ -434,8 +426,7 @@
 
       &--upload,
       &--latency {
-       // bottom: -9px;
-       bottom: -24px;
+        bottom: -24px;
       }
 
       &--download {
@@ -463,10 +454,6 @@
 
 @media (max-width: 389px) {
   .metrics {
-    &__list {
-      flex-wrap: wrap;
-      gap: 15px;
-    }
 
     &__cards {
       gap: 24px 12px;
@@ -491,14 +478,15 @@
       padding: 50px 10px 10px;
       width: 168px;
       flex: 0 0 168px;
-/*       .metric-card__progress-line {
+      /*       .metric-card__progress-line {
         path {
           stroke-width: 10px;
         }
       } */
     }
+
     &--download {
-    .metric-card__progress-box svg {
+      .metric-card__progress-box svg {
         path {
           stroke-width: 20px
         }
@@ -506,13 +494,15 @@
     }
 
     &__progress-box {
+
       &--upload,
       &--latency {
         bottom: -4px;
       }
+
       &--download {
         bottom: -24px;
-        
+
       }
     }
   }
@@ -537,20 +527,20 @@
         font-size: 16px;
       }
 
-     // .metric-card__progress-box svg {
-     //   width: 100%;
-     //   height: auto;
-     // }
+      // .metric-card__progress-box svg {
+      //   width: 100%;
+      //   height: auto;
+      // }
     }
 
     &--download {
       max-width: 290px;
       padding-bottom: 18px;
 
-    //  .metric-card__progress-box svg {
-    //    width: 100%;
-    //    height: auto;
-    //  }
+      //  .metric-card__progress-box svg {
+      //    width: 100%;
+      //    height: auto;
+      //  }
     }
 
     &__label {

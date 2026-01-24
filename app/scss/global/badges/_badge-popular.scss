@@ -1,5 +1,6 @@
 .badge-popular {
     display: inline-block;
+    white-space: nowrap;
     font-size: 14px;
     background-color: $accent;
     z-index: 15;

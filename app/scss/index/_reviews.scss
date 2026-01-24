@@ -1,5 +1,6 @@
 .reviews {
   padding-bottom: 78px;
+
   &__wrapper {
     position: relative;
     overflow: hidden;
@@ -19,6 +20,7 @@
       bottom: -18px;
       z-index: -1;
     }
+
     &::after {
       position: absolute;
       content: '';
@@ -279,15 +281,17 @@
   filter: none;
 
   .review-card__inner.blur-plate {
-    backdrop-filter: blur(20px); 
+    backdrop-filter: blur(20px);
   }
 }
 
 @media (max-width: 1064px) {
   .reviews {
     padding-bottom: 62px;
+
     &__wrapper {
       padding: 0;
+
       &::before,
       &::after {
         display: none;
@@ -470,6 +474,7 @@
 @media (max-width: 576px) {
   .reviews {
     padding-bottom: 50px;
+
     &__stats {
       gap: 16px;
     }
@@ -516,7 +521,7 @@
 @media (max-width: 389px) {
   .reviews {
     &__stats {
-      gap: 12px;
+      flex-wrap: wrap;
     }
 
     &__stat {

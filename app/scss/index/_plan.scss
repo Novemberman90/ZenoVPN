@@ -39,10 +39,9 @@
     &__advantages {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
         justify-content: space-between;
         padding-right: 41px;
-        gap: 48px;
+        gap: 100px;
         margin-bottom: 72px;
 
         &-inner {
@@ -121,8 +120,10 @@
         }
 
         &__advantages {
+            flex-direction: column;
             justify-content: center;
             padding-right: 0;
+            gap: 48px;
         }
     }
 }

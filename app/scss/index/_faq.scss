@@ -95,6 +95,7 @@
 
     &__inner {
         overflow: hidden;
+        padding-right: 42px;
     }
 
     &__button {
@@ -160,6 +161,10 @@
 
         &::after {
             background: linear-gradient(180deg, rgba(11, 18, 23, 0) -30%, #0B1217 100%), linear-gradient(0deg, rgba(11, 18, 23, 0) -30%, #0B1217 100%), linear-gradient(90deg, rgba(11, 18, 23, 0) 100%, #0B1217 100%), linear-gradient(-90deg, rgba(11, 18, 23, 0) 100%, #0B1217 100%);
+        }
+
+        &__inner {
+            padding-right: 30px;
         }
 
         &__title {

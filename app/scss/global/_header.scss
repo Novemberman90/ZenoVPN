@@ -357,11 +357,11 @@
                 opacity: 1;
                 pointer-events: all;
                 transform: translateY(0);
-                padding: 12px 0;
                 max-width: 157px;
+                padding: 12px 0;
 
                 .menu__link {
-                    padding: 12px 24px 12px 0;
+                    padding: 12px 24px;
                 }
             }
 
@@ -380,6 +380,7 @@
             text-align: right;
             display: block;
             padding: 0;
+            letter-spacing: 0.20px;
         }
     }
 
