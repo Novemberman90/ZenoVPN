@@ -30,7 +30,6 @@ html[dir="rtl"] {
   }
 
   .plan {
-    overflow-x: hidden;
     &__title {
       text-align: right;
 
@@ -118,11 +117,13 @@ html[dir="rtl"] {
       text-align: right;
     }
   }
+
   .app-card {
     &__link {
       flex-direction: row-reverse;
     }
   }
+
   .faq {
     &__inner {
       padding-right: 0;
@@ -292,6 +293,8 @@ html[dir="rtl"] {
     }
 
     .plan {
+      overflow-x: hidden;
+
       &__title {
         font-size: 40px;
       }
