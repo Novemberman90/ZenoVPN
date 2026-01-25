@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* ================= REVIEWS SWIPER ================= */
-  let swiper;
+/*   let swiper;
   let currentRange;
 
   const getRange = () => {
@@ -293,7 +293,91 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       },
     });
-  };
+  }; */
+  const getSliderDir = () => {
+  return window.innerWidth >= 768 && window.innerWidth < 1065 ? 'rtl' : 'ltr';
+};
+
+let swiper;
+let currentRange;
+
+const getRange = () => {
+  const w = window.innerWidth;
+  if (w >= 1025) return 'desktop';
+  if (w >= 768) return 'tablet';
+  return 'mobile';
+};
+
+const initSwiper = () => {
+  if (typeof Swiper === 'undefined') return;
+
+  const sliderEl = document.querySelector('.reviews-slider');
+  if (!sliderEl) return;
+
+  const newRange = getRange();
+  const newDir = getSliderDir();
+
+  // если уже инициализирован и ничего не изменилось — выходим
+  if (swiper && currentRange === newRange && sliderEl.getAttribute('dir') === newDir) {
+    return;
+  }
+
+  // пересоздание
+  if (swiper) {
+    swiper.destroy(true, true);
+    swiper = null;
+  }
+
+  sliderEl.setAttribute('dir', newDir);
+  currentRange = newRange;
+
+  swiper = new Swiper(sliderEl, {
+    effect: 'coverflow',
+    initialSlide: 1,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    allowTouchMove: false,
+
+    navigation: {
+      nextEl: '.reviews__nav--next',
+      prevEl: '.reviews__nav--prev',
+    },
+
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 280,
+      depth: 260,
+      modifier: 1,
+      slideShadows: false,
+    },
+
+    breakpoints: {
+      0: {
+        direction: 'vertical',
+        coverflowEffect: {
+          stretch: 248,
+          depth: 204,
+        },
+      },
+      768: {
+        direction: 'horizontal',
+        coverflowEffect: {
+          stretch: 256,
+          depth: 190,
+        },
+      },
+      1065: {
+        direction: 'vertical',
+        coverflowEffect: {
+          stretch: 280,
+          depth: 260,
+        },
+      },
+    },
+  });
+};
+window.addEventListener('resize', initSwiper);
+initSwiper();
 
   /* ================= GEO + LANGUAGE ================= */
   const LANG_KEY = 'siteLang';

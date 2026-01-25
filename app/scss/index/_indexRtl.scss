@@ -87,6 +87,10 @@ html[dir="rtl"] {
       right: auto;
       left: 7px;
     }
+    .review-card {
+      direction: rtl;
+      text-align: right;
+    }
   }
   .faq {
     &__inner {
