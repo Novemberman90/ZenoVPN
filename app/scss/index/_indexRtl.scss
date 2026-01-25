@@ -19,6 +19,15 @@ html[dir="rtl"] {
       transform: rotate(180deg);
     }
   }
+  .steps {
+    &__title {
+      display: flex;
+      flex-direction: column;
+ /*      .accent {
+        order: 1;
+      } */
+    }
+  }
 
   .ready {
     &__inner {
@@ -121,6 +130,24 @@ html[dir="rtl"] {
         right: auto;
         left: 50%;
       }
+    }
+    .steps {
+      &__info {
+        text-align: right;
+      }
+    }
+    .metrics {
+      &__card {
+        &--upload {
+          margin-left: 0;
+          margin-right: auto;
+        }
+        &--latency {
+          margin-right: 0;
+          margin-left: auto;
+        }
+      }
+  
     }
   }
   @media (max-width: 440px) {
