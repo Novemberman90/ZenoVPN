@@ -30,7 +30,6 @@ html[dir="rtl"] {
       text-align: right;
       .accent {
         display: block;
-        color: $light;
       }
     }
     &__item.blur-plate {
@@ -87,6 +86,16 @@ html[dir="rtl"] {
       transform: scale(-1,1);
       right: auto;
       left: 7px;
+    }
+  }
+  .faq {
+    &__inner {
+      padding-right: 0;
+      padding-left: 42px;
+    }
+    &__icon {
+      right: auto;
+      left: 18px;
     }
   }
 
