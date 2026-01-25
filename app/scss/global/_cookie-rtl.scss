@@ -12,18 +12,13 @@ html[dir="rtl"] {
       padding-right: 0;
     }
 
-    &__actions {
-      max-width: 142px;
-      width: 100%;
-    }
-
     &__text--bold {
       padding-right: 0;
       padding-left: 4px;
     }
 
     &__accept {
-      padding: 10px 42px;
+      padding: 11px 42px;
     }
   }
 
@@ -32,19 +27,20 @@ html[dir="rtl"] {
       &__content {
         padding-left: 64px;
       }
+      &__accept {
+        padding: 11px 28.5px;
+      }
     }
   }
 
   @media (max-width: 576px) {
     .cookie {
+      left: auto;
+      right: 12px;
+      transform: translateX(0);
       &__content {
         padding-left: 32px;
       }
-
-      &__accept {
-        max-width: 100%;
-      }
-
       &__text {
         text-wrap: balance;
       }
@@ -69,5 +65,11 @@ html[dir="rtl"] {
         max-width: 50%;
       }
     }
+  }
+  @media (max-width:365px ) {
+     .cookie {
+      right: 8px;
+      left: 0;
+     }
   }
 }

@@ -105,11 +105,53 @@ document.addEventListener('DOMContentLoaded', () => {
           goTop.classList.remove('go-top--active');
         }
       }
+
     };
 
     window.addEventListener('scroll', headerScroll);
     headerScroll();
   }
+
+/* ================= MENU ACTIVE LINK OBSERVER ================= */
+
+const menuLinks = document.querySelectorAll('.menu__link');
+const menuSections = document.querySelectorAll(
+  '#hero, #steps, #pricing, #support'
+);
+
+if (menuLinks.length && menuSections.length) {
+  const menuObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const activeId = entry.target.id;
+
+        menuLinks.forEach((link) => {
+          link.classList.toggle(
+            'menu__link--active',
+            link.getAttribute('href') === `#${activeId}`
+          );
+        });
+      });
+    },
+    {
+      rootMargin: '-100px 0px -40% 0px',
+      threshold: 0,
+    }
+  );
+
+  menuSections.forEach((section) => menuObserver.observe(section));
+}
+window.addEventListener('scroll', () => {
+  if (window.scrollY < 50) {
+    menuLinks.forEach((link) =>
+      link.classList.remove('menu__link--active')
+    );
+  }
+});
+
+
 
   /* ================= HELPERS ================= */
   const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
@@ -189,9 +231,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
           animateNumbers(entry.target.querySelectorAll('[data-count-num]'));
           observer.unobserve(entry.target);
+          
         });
       },
-      { threshold: 0.4 }
+      
+      
+      { threshold: 0.5 }
     );
 
     targets.forEach((el) => observer.observe(el));

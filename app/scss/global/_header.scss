@@ -108,6 +108,9 @@
                 background-color: $accent;
             }
         }
+      &--active {
+        color: $accent;
+      }
     }
 }
 

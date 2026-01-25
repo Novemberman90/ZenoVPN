@@ -30,6 +30,7 @@ html[dir="rtl"] {
   }
 
   .plan {
+    overflow-x: hidden;
     &__title {
       text-align: right;
 
@@ -117,7 +118,11 @@ html[dir="rtl"] {
       text-align: right;
     }
   }
-
+  .app-card {
+    &__link {
+      flex-direction: row-reverse;
+    }
+  }
   .faq {
     &__inner {
       padding-right: 0;
@@ -148,9 +153,6 @@ html[dir="rtl"] {
       transform: scale3d(-1, 1, 1);
     }
 
-    &__item-accent {
-      text-wrap: nowrap;
-    }
   }
 
   @media(max-width: 1200px) {
