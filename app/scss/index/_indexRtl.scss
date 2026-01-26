@@ -3,6 +3,10 @@ html[dir="rtl"] {
   text-align: right;
 
   .hero {
+    &__title {
+      display: flex;
+      flex-direction: column;
+    }
     &__item {
       &::before {
         right: auto;
@@ -192,16 +196,24 @@ html[dir="rtl"] {
 
   @media (max-width: 992px) {
     .hero {
-      &::before {
+/*       &::before {
         left: 0;
         right: auto;
         bottom: -22px;
         transform: scale(-1, 1);
-      }
+      } */
 
       &::after {
         right: calc(50% - 80px);
         left: auto;
+      }
+      &__advantages {
+        &::before {
+          left: 0;
+          right: auto;
+          bottom: -20px;
+          transform: scale(-1, 1);
+        }
       }
     }
 
@@ -258,11 +270,22 @@ html[dir="rtl"] {
 
   @media (max-width: 576px) {
     .hero {
-      &::before {
-        bottom: 0;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: calc(50% - 86px);
+/*       &::before {
+       bottom: 0;
+       transform: translate(-50%, -50%);
+       left: 50%;
+       top: calc(50% - 86px);
+
+      } */
+      &__title {
+        display: block;
+      }
+      &__advantages {
+        &::before {
+          left: 0;
+          right: 50%;
+          transform: translateX(50%);
+        }
       }
 
       &::after {
