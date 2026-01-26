@@ -196,12 +196,18 @@
   &__inner {
     padding: 24px;
     border-radius: 32px;
-
+    
     &.blur-plate {
       background: linear-gradient(75.18deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.06) 100%);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-
+          /* Только Firefox */
+      @-moz-document url-prefix() {
+        &.blur-plate {
+          background-color: rgba($color: $dark, $alpha: .8);
+        }
+      }
+      
       &::after {
         padding: 1px;
         border-radius: 32px;
@@ -209,7 +215,9 @@
           linear-gradient(227.43deg, rgba(255, 255, 255, 0) 77.44%, rgba(255, 255, 255, 0.6) 100%)
       }
     }
+
   }
+
 
   &__header {
     display: flex;
