@@ -124,6 +124,7 @@
         top: 50%;
         transform: translateY(-50%);
         transition: transform 0.3s, top 0.3s;
+        pointer-events: none;
     }
 }
 
